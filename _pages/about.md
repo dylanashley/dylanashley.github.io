@@ -2,7 +2,7 @@
 layout: about
 permalink: /
 title: <strong>Dylan</strong> Ashley
-description: University of Alberta
+description: Graduate Student in Artificial Intelligence and Student Leader
 
 profile:
   align: right
@@ -16,4 +16,6 @@ social: true
 
 Hi! I'm an M.Sc. student in the [Reinforcement Learning and Artificial Intelligence lab](http://rlai.ualberta.ca) at the [University of Alberta](https://www.ualberta.ca/index.html). I work with [Professor Richard Sutton](http://www.incompleteideas.net) of the [Alberta Machine Intelligence Institute](https://www.amii.ca). I'm also currently the Vice-President Academic of the [Graduate Students' Association](https://www.ualberta.ca/graduate-students-association). Before all of this, I was a B.Sc. student in Computing Science at the University of Alberta, and before that, I was a High School student in South Africa.
 
-I'm mainly interested in topics related to a branch of Artificial Intelligence called Reinforcement Learning. I'm also interested in Machine Learning more broadly. My [publications](publications) give a good snapshot of the kind of research I enjoy.
+Most of my research focuses on various topics related to a particular branch of Artificial Intelligence called Reinforcement Learning, though I'm interested in Machine Learning more broadly. You can find a list of my publications [here](research).
+
+When my research gives me a free moment, you can often find me working to become a better amateur photographer. You can check out my portfolio [here](https://adobe.ly/2GorElp).

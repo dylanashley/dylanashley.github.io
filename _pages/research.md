@@ -1,7 +1,7 @@
 ---
 layout: page
-permalink: /publications/
-title: Publications
+permalink: /research/
+title: Research
 description: Publications in reversed chronological order.
 years: [2019, 2018]
 ---
