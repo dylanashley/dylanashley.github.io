@@ -1,6 +1,27 @@
 
 /******************************************************************************/
 
+// colors taken from http://clrs.cc
+$clrs-navy:         #001F3F !default;
+$clrs-blue:         #0074D9 !default;
+$clrs-aqua:         #7FDBFF !default;
+$clrs-teal:         #39CCCC !default;
+$clrs-olive:        #3D9970 !default;
+$clrs-green:        #2ECC40 !default;
+$clrs-lime:         #01FF70 !default;
+$clrs-yellow:       #FFDC00 !default;
+$clrs-orange:       #FF851B !default;
+$clrs-red:          #FF4136 !default;
+$clrs-fuchsia:      #F012BE !default;
+$clrs-purple:       #B10DC9 !default;
+$clrs-maroon:       #85144B !default;
+$clrs-white:        #FFFFFF !default;
+$clrs-silver:       #DDDDDD !default;
+$clrs-gray:         #AAAAAA !default;
+$clrs-black:        #111111 !default;
+
+/******************************************************************************/
+
 // Typography
 $base-font-size: 16px !default;
 $small-font-size:  0.875rem !default;
@@ -54,7 +75,6 @@ $purple:            #B509AC !default;
 $pink:              #f92080 !default;
 $light-pink:        #ffdddd !default;
 $yellow:            #efcc00 !default;
-$olive:             #3d9970 !default;  // from https://clrs.cc
 
 $white:             #fff !default;
 $dark-gray:         #333 !default;
@@ -71,7 +91,7 @@ $darken-2:          rgba(#000,.125) !default;
 $darken-3:          rgba(#000,.25) !default;
 $darken-4:          rgba(#000,.5) !default;
 
-$theme-color:       $olive;
+$theme-color:       $clrs-olive;
 $code-color:        $dark-gray;
 $text-color:        $mid-gray;
 $background-color:  white;
@@ -151,9 +171,7 @@ $footer-bg-color: $grey-color-dark;
 $footer-font-weight: 300;
 $footer-font-size: .75rem;
 
-
 /******************************************************************************/
-
 
 /* portfolio tinkering */
 $img_spacing: 5px;

@@ -2,6 +2,21 @@
 ---
 
 @inproceedings{DBLP:conf/cig/AshleyCKB19,
+  abstract  = {Procedural content generation (PCG) is an active area of research with the
+               potential to significantly reduce game development costs as well as create game
+               experiences meaningfully personalized to each player. Evolutionary methods are
+               a promising method of generating content procedurally. In particular
+               asynchronous evolution of AI agents in an artificial life (A-life) setting is
+               notably similar to the online evolution of non-playable characters in a video
+               game. In this paper, we are concerned with improving the efficiency of
+               evolution via more effective mate selection. In the spirit of PCG, we
+               genetically encode each agent's preference for mating partners and thereby
+               allowing the mate-selection process to evolve. We evaluate this approach in a
+               simple predator-prey A-life environment and demonstrate that the ability to
+               evolve a per-agent mate-selection preference function indeed significantly
+               increases the extinction time of the population. Additionally, an inspection of
+               the evolved preference function parameters shows that agents evolve to favor
+               mates who have survival traits.},
   author    = {Dylan R. Ashley and
                Valliappa Chockalingam and
                Braedy Kuzma and
@@ -21,6 +36,20 @@
 }
 
 @inproceedings{DBLP:conf/gecco/AshleyCKB19,
+  abstract  = {Artificial life (A-life) simulations present a natural way to study interesting
+               phenomena emerging in a population of evolving agents. In this paper, we
+               investigate whether allowing A-life agents to select mates can extend the
+               lifetime of a population. In our approach, each agent evaluates potential mates
+               via a preference function. The role of this function is to map information
+               about an agent and its candidate mate to a scalar preference for deciding
+               whether or not to form an offspring. We encode the parameters of the preference
+               function genetically within each agent, thus allowing such preferences to be
+               agent-specific as well as evolving over time. We evaluate this approach in a
+               simple predator-prey A-life environment and demonstrate that the ability to
+               evolve a per-agent mate-selection preference function indeed significantly
+               increases the extinction time of the population. Additionally an inspection of
+               the evolved preference function parameters shows that agents evolve to favor
+               mates who have survival traits.},
   author    = {Dylan R. Ashley and
                Valliappa Chockalingam and
                Braedy Kuzma and
@@ -43,6 +72,25 @@
 }
 
 @inproceedings{DBLP:conf/uai/SherstanABYWWS18,
+  abstract  = {Temporal-difference (TD) learning methods are widely used in reinforcement
+               learning to estimate the expected return for each state, without a model,
+               because of their significant advantages in computational and data efficiency.
+               For many applications involving risk mitigation, it would also be useful to
+               estimate the \emph{variance} of the return by TD methods. In this paper, we
+               describe a way of doing this that is substantially simpler than those proposed
+               by Tamar, Di Castro, and Mannor in 2012, or those proposed by White and White
+               in 2016. We show that two TD learners operating in series can learn expectation
+               and variance estimates. The trick is to use the square of the TD error of the
+               expectation learner as the reward of the variance learner, and the square of
+               the expectation learner’s discount rate as the discount rate of the variance
+               learner. With these two modifications, the variance learning problem becomes a
+               conventional TD learning problem to which standard theoretical results can be
+               applied. Our formal results are limited to the table lookup case, for which our
+               method is still novel, but the extension to function approximation is
+               immediate, and we provide some empirical results for the linear function
+               approximation case. Our experimental results show that our direct method
+               behaves just as well as a comparable indirect method, but is generally more
+               robust.},
   author    = {Craig Sherstan and
                Dylan R. Ashley and
                Brendan Bennett and
@@ -64,10 +112,27 @@
   biburl    = {https://dblp.org/rec/bib/conf/uai/SherstanABYWWS18},
   bibsource = {dblp computer science bibliography, https://dblp.org},
   pdf       = {http://auai.org/uai2018/proceedings/papers/35.pdf},
-  supp      = {http://auai.org/uai2018/proceedings/supplements/Supplementary-Paper35.pdf}
+  sup       = {http://auai.org/uai2018/proceedings/supplements/Supplementary-Paper35.pdf}
 }
 
 @inproceedings{DBLP:conf/ispass/AmaralBABCHKORR18,
+  abstract  = {A proper evaluation of techniques that require multiple training and evaluation
+               executions of a benchmark, such as Feedback-Directed Optimization (FDO),
+               requires multiple workloads that can be used to characterize variations on the
+               behaviour of a program based on the workload. This paper aims to improve the
+               performance evaluation of computer systems - including compilers, computer
+               architecture simulation, and operating-system prototypes - that rely on the
+               industrystandard SPEC CPU benchmark suite. A main concern with the use of this
+               suite in research is that it is distributed with a very small number of
+               workloads. This paper describes the process to create additional workloads for
+               this suite and offers useful insights in many of its benchmarks. The set of
+               additional workloads created, named the Alberta Workloads for the SPEC CPU 2017
+               Benchmark Suite1 is made freely available with the goal of providing additional
+               data points for the exploration of learning in computing systems. These
+               workloads should also contribute to ameliorate the hidden learning problem
+               where a researcher sets parameters to a system during development based on a
+               set of benchmarks and then evaluates the system using the very same set of
+               benchmarks with the very same workloads.},
   author    = {Jos{\'{e}} Nelson Amaral and
                Edson Borin and
                Dylan R. Ashley and
@@ -93,6 +158,32 @@
 }
 
 @article{DBLP:journals/corr/abs-1801-08287,
+  abstract  = {This paper investigates estimating the variance of a temporal-difference
+               learning agent's update target. Most reinforcement learning methods use an
+               estimate of the value function, which captures how good it is for the agent to
+               be in a particular state and is mathematically expressed as the expected sum of
+               discounted future rewards (called the return). These values can be
+               straightforwardly estimated by averaging batches of returns using Monte Carlo
+               methods. However, if we wish to update the agent's value estimates during
+               learning--before terminal outcomes are observed--we must use a different
+               estimation target called the {\lambda}-return, which truncates the return with
+               the agent's own estimate of the value function. Temporal difference learning
+               methods estimate the expected {\lambda}-return for each state, allowing these
+               methods to update online and incrementally, and in most cases achieve better
+               generalization error and faster learning than Monte Carlo methods. Naturally
+               one could attempt to estimate higher-order moments of the {\lambda}-return.
+               This paper is about estimating the variance of the {\lambda}-return. Prior work
+               has shown that given estimates of the variance of the {\lambda}-return,
+               learning systems can be constructed to (1) mitigate risk in action selection,
+               and (2) automatically adapt the parameters of the learning process itself to
+               improve performance. Unfortunately, existing methods for estimating the
+               variance of the {\lambda}-return are complex and not well understood
+               empirically. We contribute a method for estimating the variance of the
+               {\lambda}-return directly using policy evaluation methods from reinforcement
+               learning. Our approach is significantly simpler than prior methods that
+               independently estimate the second moment of the {\lambda}-return. Empirically
+               our new approach behaves at least as well as existing approaches, but is
+               generally more robust.},
   author    = {Craig Sherstan and
                Brendan Bennett and
                Kenny Young and
