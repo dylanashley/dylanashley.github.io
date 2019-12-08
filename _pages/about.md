@@ -2,7 +2,7 @@
 layout: about
 permalink: /
 title: <strong>Dylan</strong> Ashley
-description: Graduate Student in Artificial Intelligence &#9671; Student Leader
+description: Reinforcement Learning &#9671; Machine Learning &#9671; Artificial Intelligence
 
 profile:
   align: right
