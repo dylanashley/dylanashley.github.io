@@ -1,6 +1,70 @@
 ---
 ---
 
+@misc{ashley2020understanding,
+  abstract  = {This thesis is offered as a step forward in our understanding of forgetting in
+               artificial neural networks. ANNs are a learning system loosely based on our
+               understanding of the brain and are responsible for recent breakthroughs in
+               artificial intelligence. However, they have been reported to be particularly
+               susceptible to forgetting. Specifically, existing research suggests that ANNs
+               may exhibit unexpectedly high rates of retroactive inhibition when compared
+               with results from psychology studies measuring forgetting in people. If this
+               phenomenon, dubbed catastrophic forgetting, exists, then explicit methods
+               intended to reduce it may increase the scope of problems ANNs can be
+               successfully applied to.
+
+               In this thesis, we contribute to the field by answering five questions related
+               to forgetting in ANNs: How does forgetting in psychology relate to ideas in
+               machine learning? What is catastrophic forgetting? Does it exist in
+               contemporary systems, and, if so, is it severe? How can we measure a system's
+               susceptibility to it? Are the current optimization algorithms we use to train
+               ANNs adding to its severity?
+
+               This work answers each of the five questions sequentially. We begin by
+               answering the first and second of the five questions by providing an analytical
+               survey that looks at the concept of forgetting as it appears in psychology and
+               connects it to various ideas in machine learning such as generalization,
+               transfer learning, experience replay, and eligibility traces.
+
+               We subsequently confirm the existence and severity of catastrophic forgetting
+               in some contemporary machine learning systems by showing that it appears when a
+               simple, modern ANN (multi-layered fully-connected network with rectified linear
+               unit activation) is trained using a conventional algorithm (Stochastic Gradient
+               Descent through backpropagation with normal random initialization)
+               incrementally on a well-known multi-class classification setting (MNIST). We
+               demonstrate that the phenomenon is a more subtle problem than a simple reversal
+               of learning. We accomplish this by noting that both total learning time and
+               relearning time are reduced when the multi-class classification problem is
+               split into multiple phases containing samples from disjoint subsets of the
+               classes.
+
+               We then move on to looking at how we can measure the degree to which ANN-based
+               learning systems suffer from catastrophic forgetting by constructing a
+               principled testbed out of the previous multi-task supervised learning problem
+               and two well-studied reinforcement learning problems (Mountain Car and
+               Acrobot). We apply this testbed to answer the final of the five questions by
+               looking at how several modern gradient-based optimization algorithms used to
+               train ANNs (SGD, SGD with Momentum, RMSProp, and Adam) affect the amount of
+               catastrophic forgetting that occurs during training. While doing so, we are
+               able to confirm and expand previous hypotheses surrounding the complexities of
+               measuring catastrophic forgetting. We find that different algorithms, even when
+               applied to the same ANN, result in significantly different amounts of
+               catastrophic forgetting under a variety of different metrics.
+
+               We believe that our answers to the five questions constitute a step forward in
+               our understanding of forgetting as it appears in ANNs. Such an understanding is
+               essential for realizing the full potential that ANNs offer to the study of
+               artificial intelligence.},
+  author    = {Dylan R. Ashley},
+  title     = {Understanding Forgetting in Artificial Neural Networks},
+  code      = {https://github.com/dylanashley/catastrophic-forgetting},
+  doi       = {https://doi.org/10.7939/r3-6zvv-5z64},
+  html      = {https://era.library.ualberta.ca/items/9b558c25-6120-4771-910e-85585abb7cc6},
+  note      = {Master’s thesis, University of Alberta},
+  pdf       = {https://era.library.ualberta.ca/items/9b558c25-6120-4771-910e-85585abb7cc6/view/34bd34af-df7a-48bd-aa7d-8da2741fa2e1/Ashley_Dylan_R_202009_MSc.pdf},
+  year      = {2020}
+}
+
 @article{DBLP:journals/corr/abs-2001-04025,
   abstract  = {Transfer in Reinforcement Learning (RL) refers to the idea of applying
                knowledge gained from previous tasks to solving related tasks. Learning a
