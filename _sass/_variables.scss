@@ -1,6 +1,8 @@
 
 /******************************************************************************/
 
+$marrs-green:       #008C8C !default;
+
 // colors taken from http://clrs.cc
 $clrs-navy:         #001F3F !default;
 $clrs-blue:         #0074D9 !default;
@@ -91,7 +93,7 @@ $darken-2:          rgba(#000,.125) !default;
 $darken-3:          rgba(#000,.25) !default;
 $darken-4:          rgba(#000,.5) !default;
 
-$theme-color:       $clrs-olive;
+$theme-color:       $marrs-green;
 $code-color:        $dark-gray;
 $text-color:        $mid-gray;
 $background-color:  white;
