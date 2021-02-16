@@ -2,7 +2,7 @@
 # Site settings
 # -----------------------------------------------------------------------------
 name: Dylan Ashley
-email: dylanashley@dylanashley.io
+email: dylan.ashley@idsia.ch
 description: >
   A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
 footer_text: >
@@ -11,7 +11,7 @@ footer_text: >
 
 url:
 baseurl:
-last_updated: 2020-12-08
+last_updated: 2021-02-16
 
 # -----------------------------------------------------------------------------
 # Open Graph

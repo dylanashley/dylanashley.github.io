@@ -1,84 +1,126 @@
 ---
 ---
 
-@article{ashley2020understanding,
-    abstract     = {This thesis is offered as a step forward in our understanding of forgetting in
-                    artificial neural networks. ANNs are a learning system loosely based on our
-                    understanding of the brain and are responsible for recent breakthroughs in
-                    artificial intelligence. However, they have been reported to be particularly
-                    susceptible to forgetting. Specifically, existing research suggests that ANNs
-                    may exhibit unexpectedly high rates of retroactive inhibition when compared
-                    with results from psychology studies measuring forgetting in people. If this
-                    phenomenon, dubbed catastrophic forgetting, exists, then explicit methods
-                    intended to reduce it may increase the scope of problems ANNs can be
-                    successfully applied to.
+@inproceedings{ashley2021does,
+    abstract     = {Catastrophic forgetting remains a severe hindrance to the broad
+                    application of artificial neural networks (ANNs), however, it continues
+                    to be a poorly understood phenomenon. Despite the extensive amount of
+                    work on catastrophic forgetting, we argue that it is still unclear how
+                    exactly the phenomenon should be quantified, and, moreover, to what
+                    degree all of the choices we make when designing learning systems
+                    affect the amount of catastrophic forgetting. We use various testbeds
+                    from the reinforcement learning and supervised learning literature to
+                    (1) provide evidence that the choice of which modern gradient-based
+                    optimization algorithm is used to train an ANN has a significant impact
+                    on the amount of catastrophic forgetting and show
+                    that--surprisingly--in many instances classical algorithms such as
+                    vanilla SGD experience less catastrophic forgetting than the more
+                    modern algorithms such as Adam. We empirically compare four different
+                    existing metrics for quantifying catastrophic forgetting and (2) show
+                    that the degree to which the learning systems experience catastrophic
+                    forgetting is sufficiently sensitive to the metric used that a change
+                    from one principled metric to another is enough to change the
+                    conclusions of a study dramatically. Our results suggest that a much
+                    more rigorous experimental methodology is required when looking at
+                    catastrophic forgetting. Based on our results, we recommend inter-task
+                    forgetting in supervised learning must be measured with both retention
+                    and relearning metrics concurrently, and intra-task forgetting in
+                    reinforcement learning must--at the very least--be measured with
+                    pairwise interference.},
+    author       = {Dylan R. Ashley and
+                    Sina Ghiassian and
+                    Richard S. Sutton},
+    title        = {Does Standard Backpropagation Forget Less Catastrophically Than Adam?},
+    arxiv        = {2102.07686},
+    booktitle    = {arXiv},
+    year         = {2021}
+}
 
-                    In this thesis, we contribute to the field by answering five questions related
-                    to forgetting in ANNs: How does forgetting in psychology relate to ideas in
-                    machine learning? What is catastrophic forgetting? Does it exist in
-                    contemporary systems, and, if so, is it severe? How can we measure a system's
-                    susceptibility to it? Are the current optimization algorithms we use to train
-                    ANNs adding to its severity?
+@article{ashley2020understanding,
+    abstract     = {This thesis is offered as a step forward in our understanding of
+                    forgetting in artificial neural networks. ANNs are a learning system
+                    loosely based on our understanding of the brain and are responsible for
+                    recent breakthroughs in artificial intelligence. However, they have
+                    been reported to be particularly susceptible to forgetting.
+                    Specifically, existing research suggests that ANNs may exhibit
+                    unexpectedly high rates of retroactive inhibition when compared with
+                    results from psychology studies measuring forgetting in people. If this
+                    phenomenon, dubbed catastrophic forgetting, exists, then explicit
+                    methods intended to reduce it may increase the scope of problems ANNs
+                    can be successfully applied to.
+
+                    In this thesis, we contribute to the field by answering five questions
+                    related to forgetting in ANNs: How does forgetting in psychology relate
+                    to ideas in machine learning? What is catastrophic forgetting? Does it
+                    exist in contemporary systems, and, if so, is it severe? How can we
+                    measure a system's susceptibility to it? Are the current optimization
+                    algorithms we use to train ANNs adding to its severity?
 
                     This work answers each of the five questions sequentially. We begin by
-                    answering the first and second of the five questions by providing an analytical
-                    survey that looks at the concept of forgetting as it appears in psychology and
-                    connects it to various ideas in machine learning such as generalization,
-                    transfer learning, experience replay, and eligibility traces.
+                    answering the first and second of the five questions by providing an
+                    analytical survey that looks at the concept of forgetting as it appears
+                    in psychology and connects it to various ideas in machine learning such
+                    as generalization, transfer learning, experience replay, and
+                    eligibility traces.
 
-                    We subsequently confirm the existence and severity of catastrophic forgetting
-                    in some contemporary machine learning systems by showing that it appears when a
-                    simple, modern ANN (multi-layered fully-connected network with rectified linear
-                    unit activation) is trained using a conventional algorithm (Stochastic Gradient
-                    Descent through backpropagation with normal random initialization)
-                    incrementally on a well-known multi-class classification setting (MNIST). We
-                    demonstrate that the phenomenon is a more subtle problem than a simple reversal
-                    of learning. We accomplish this by noting that both total learning time and
-                    relearning time are reduced when the multi-class classification problem is
-                    split into multiple phases containing samples from disjoint subsets of the
-                    classes.
+                    We subsequently confirm the existence and severity of catastrophic
+                    forgetting in some contemporary machine learning systems by showing
+                    that it appears when a simple, modern ANN (multi-layered
+                    fully-connected network with rectified linear unit activation) is
+                    trained using a conventional algorithm (Stochastic Gradient Descent
+                    through backpropagation with normal random initialization)
+                    incrementally on a well-known multi-class classification setting
+                    (MNIST). We demonstrate that the phenomenon is a more subtle problem
+                    than a simple reversal of learning. We accomplish this by noting that
+                    both total learning time and relearning time are reduced when the
+                    multi-class classification problem is split into multiple phases
+                    containing samples from disjoint subsets of the classes.
 
-                    We then move on to looking at how we can measure the degree to which ANN-based
-                    learning systems suffer from catastrophic forgetting by constructing a
-                    principled testbed out of the previous multi-task supervised learning problem
-                    and two well-studied reinforcement learning problems (Mountain Car and
-                    Acrobot). We apply this testbed to answer the final of the five questions by
-                    looking at how several modern gradient-based optimization algorithms used to
-                    train ANNs (SGD, SGD with Momentum, RMSProp, and Adam) affect the amount of
-                    catastrophic forgetting that occurs during training. While doing so, we are
-                    able to confirm and expand previous hypotheses surrounding the complexities of
-                    measuring catastrophic forgetting. We find that different algorithms, even when
-                    applied to the same ANN, result in significantly different amounts of
-                    catastrophic forgetting under a variety of different metrics.
+                    We then move on to looking at how we can measure the degree to which
+                    ANN-based learning systems suffer from catastrophic forgetting by
+                    constructing a principled testbed out of the previous multi-task
+                    supervised learning problem and two well-studied reinforcement learning
+                    problems (Mountain Car and Acrobot). We apply this testbed to answer
+                    the final of the five questions by looking at how several modern
+                    gradient-based optimization algorithms used to train ANNs (SGD, SGD
+                    with Momentum, RMSProp, and Adam) affect the amount of catastrophic
+                    forgetting that occurs during training. While doing so, we are able to
+                    confirm and expand previous hypotheses surrounding the complexities of
+                    measuring catastrophic forgetting. We find that different algorithms,
+                    even when applied to the same ANN, result in significantly different
+                    amounts of catastrophic forgetting under a variety of different
+                    metrics.
 
-                    We believe that our answers to the five questions constitute a step forward in
-                    our understanding of forgetting as it appears in ANNs. Such an understanding is
-                    essential for realizing the full potential that ANNs offer to the study of
-                    artificial intelligence.},
+                    We believe that our answers to the five questions constitute a step
+                    forward in our understanding of forgetting as it appears in ANNs. Such
+                    an understanding is essential for realizing the full potential that
+                    ANNs offer to the study of artificial intelligence.},
     author       = {Dylan R. Ashley},
     title        = {Understanding Forgetting in Artificial Neural Networks},
     code         = {https://github.com/dylanashley/catastrophic-forgetting},
     journal      = {Master’s thesis, University of Alberta},
     pdf          = {https://era.library.ualberta.ca/items/9b558c25-6120-4771-910e-85585abb7cc6},
+    slides       = {MSc_thesis_slides.pdf},
     year         = {2020}
 }
 
 @inproceedings{ma2020universal,
     abstract     = {Transfer in Reinforcement Learning (RL) refers to the idea of applying
-                    knowledge gained from previous tasks to solving related tasks. Learning a
-                    universal value function (Schaul et al., 2015), which generalizes over goals
-                    and states, has previously been shown to be useful for transfer. However,
-                    successor features are believed to be more suitable than values for transfer
-                    (Dayan, 1993; Barreto et al., 2017), even though they cannot directly
-                    generalize to new goals. In this paper, we propose (1) Universal Successor
-                    Features (USFs) to capture the underlying dynamics of the environment while
-                    allowing generalization to unseen goals and (2) a flexible end-to-end model of
-                    USFs that can be trained by interacting with the environment. We show that
-                    learning USFs is compatible with any RL algorithm that learns state values
-                    using a temporal difference method. Our experiments in a simple gridworld and
-                    with two MuJoCo environments show that USFs can greatly accelerate training
-                    when learning multiple tasks and can effectively transfer knowledge to new
-                    tasks.},
+                    knowledge gained from previous tasks to solving related tasks. Learning
+                    a universal value function (Schaul et al., 2015), which generalizes
+                    over goals and states, has previously been shown to be useful for
+                    transfer. However, successor features are believed to be more suitable
+                    than values for transfer (Dayan, 1993; Barreto et al., 2017), even
+                    though they cannot directly generalize to new goals. In this paper, we
+                    propose (1) Universal Successor Features (USFs) to capture the
+                    underlying dynamics of the environment while allowing generalization to
+                    unseen goals and (2) a flexible end-to-end model of USFs that can be
+                    trained by interacting with the environment. We show that learning USFs
+                    is compatible with any RL algorithm that learns state values using a
+                    temporal difference method. Our experiments in a simple gridworld and
+                    with two MuJoCo environments show that USFs can greatly accelerate
+                    training when learning multiple tasks and can effectively transfer
+                    knowledge to new tasks.},
     author       = {Chen Ma and
                     Dylan R. Ashley and
                     Junfeng Wen and
@@ -90,21 +132,23 @@
 }
 
 @inproceedings{ashley2019learning,
-    abstract     = {Procedural content generation (PCG) is an active area of research with the
-                    potential to significantly reduce game development costs as well as create game
-                    experiences meaningfully personalized to each player. Evolutionary methods are
-                    a promising method of generating content procedurally. In particular
-                    asynchronous evolution of AI agents in an artificial life (A-life) setting is
-                    notably similar to the online evolution of non-playable characters in a video
-                    game. In this paper, we are concerned with improving the efficiency of
-                    evolution via more effective mate selection. In the spirit of PCG, we
-                    genetically encode each agent's preference for mating partners and thereby
-                    allowing the mate-selection process to evolve. We evaluate this approach in a
-                    simple predator-prey A-life environment and demonstrate that the ability to
-                    evolve a per-agent mate-selection preference function indeed significantly
-                    increases the extinction time of the population. Additionally, an inspection of
-                    the evolved preference function parameters shows that agents evolve to favor
-                    mates who have survival traits.},
+    abstract     = {Procedural content generation (PCG) is an active area of research with
+                    the potential to significantly reduce game development costs as well as
+                    create game experiences meaningfully personalized to each player.
+                    Evolutionary methods are a promising method of generating content
+                    procedurally. In particular asynchronous evolution of AI agents in an
+                    artificial life (A-life) setting is notably similar to the online
+                    evolution of non-playable characters in a video game. In this paper, we
+                    are concerned with improving the efficiency of evolution via more
+                    effective mate selection. In the spirit of PCG, we genetically encode
+                    each agent's preference for mating partners and thereby allowing the
+                    mate-selection process to evolve. We evaluate this approach in a simple
+                    predator-prey A-life environment and demonstrate that the ability to
+                    evolve a per-agent mate-selection preference function indeed
+                    significantly increases the extinction time of the population.
+                    Additionally, an inspection of the evolved preference function
+                    parameters shows that agents evolve to favor mates who have survival
+                    traits.},
     author       = {Dylan R. Ashley and
                     Valliappa Chockalingam and
                     Braedy Kuzma and
@@ -112,24 +156,27 @@
     title        = {Learning to Select Mates in Evolving Non-playable Characters},
     booktitle    = {Proceedings of the {IEEE} Conference on Games},
     pdf          = {http://ieee-cog.org/2019/papers/paper_66.pdf},
+    slides       = {IEEE_CoG_2019.pdf},
     year         = {2019}
 }
 
-@inproceedings{ashley2019artificial,
-    abstract     = {Artificial life (A-life) simulations present a natural way to study interesting
-                    phenomena emerging in a population of evolving agents. In this paper, we
-                    investigate whether allowing A-life agents to select mates can extend the
-                    lifetime of a population. In our approach, each agent evaluates potential mates
-                    via a preference function. The role of this function is to map information
-                    about an agent and its candidate mate to a scalar preference for deciding
-                    whether or not to form an offspring. We encode the parameters of the preference
-                    function genetically within each agent, thus allowing such preferences to be
-                    agent-specific as well as evolving over time. We evaluate this approach in a
-                    simple predator-prey A-life environment and demonstrate that the ability to
-                    evolve a per-agent mate-selection preference function indeed significantly
-                    increases the extinction time of the population. Additionally an inspection of
-                    the evolved preference function parameters shows that agents evolve to favor
-                    mates who have survival traits.},
+@inproceedings{ashley2019select,
+    abstract     = {Artificial life (A-life) simulations present a natural way to study
+                    interesting phenomena emerging in a population of evolving agents. In
+                    this paper, we investigate whether allowing A-life agents to select
+                    mates can extend the lifetime of a population. In our approach, each
+                    agent evaluates potential mates via a preference function. The role of
+                    this function is to map information about an agent and its candidate
+                    mate to a scalar preference for deciding whether or not to form an
+                    offspring. We encode the parameters of the preference function
+                    genetically within each agent, thus allowing such preferences to be
+                    agent-specific as well as evolving over time. We evaluate this approach
+                    in a simple predator-prey A-life environment and demonstrate that the
+                    ability to evolve a per-agent mate-selection preference function indeed
+                    significantly increases the extinction time of the population.
+                    Additionally an inspection of the evolved preference function
+                    parameters shows that agents evolve to favor mates who have survival
+                    traits.},
     author       = {Dylan R. Ashley and
                     Valliappa Chockalingam and
                     Braedy Kuzma and
@@ -142,25 +189,27 @@
 }
 
 @inproceedings{sherstan2018comparing,
-    abstract     = {Temporal-difference (TD) learning methods are widely used in reinforcement
-                    learning to estimate the expected return for each state, without a model,
-                    because of their significant advantages in computational and data efficiency.
-                    For many applications involving risk mitigation, it would also be useful to
-                    estimate the \emph{variance} of the return by TD methods. In this paper, we
-                    describe a way of doing this that is substantially simpler than those proposed
-                    by Tamar, Di Castro, and Mannor in 2012, or those proposed by White and White
-                    in 2016. We show that two TD learners operating in series can learn expectation
-                    and variance estimates. The trick is to use the square of the TD error of the
-                    expectation learner as the reward of the variance learner, and the square of
-                    the expectation learner’s discount rate as the discount rate of the variance
-                    learner. With these two modifications, the variance learning problem becomes a
-                    conventional TD learning problem to which standard theoretical results can be
-                    applied. Our formal results are limited to the table lookup case, for which our
+    abstract     = {Temporal-difference (TD) learning methods are widely used in
+                    reinforcement learning to estimate the expected return for each state,
+                    without a model, because of their significant advantages in
+                    computational and data efficiency. For many applications involving risk
+                    mitigation, it would also be useful to estimate the \emph{variance} of
+                    the return by TD methods. In this paper, we describe a way of doing
+                    this that is substantially simpler than those proposed by Tamar, Di
+                    Castro, and Mannor in 2012, or those proposed by White and White in
+                    2016. We show that two TD learners operating in series can learn
+                    expectation and variance estimates. The trick is to use the square of
+                    the TD error of the expectation learner as the reward of the variance
+                    learner, and the square of the expectation learner’s discount rate as
+                    the discount rate of the variance learner. With these two
+                    modifications, the variance learning problem becomes a conventional TD
+                    learning problem to which standard theoretical results can be applied.
+                    Our formal results are limited to the table lookup case, for which our
                     method is still novel, but the extension to function approximation is
-                    immediate, and we provide some empirical results for the linear function
-                    approximation case. Our experimental results show that our direct method
-                    behaves just as well as a comparable indirect method, but is generally more
-                    robust.},
+                    immediate, and we provide some empirical results for the linear
+                    function approximation case. Our experimental results show that our
+                    direct method behaves just as well as a comparable indirect method, but
+                    is generally more robust.},
     author       = {Craig Sherstan and
                     Dylan R. Ashley and
                     Brendan Bennett and
@@ -172,28 +221,32 @@
     booktitle    = {Proceedings of the Conference on Uncertainty in Artificial Intelligence},
     code         = {https://github.com/dylanashley/variance-learning},
     pdf          = {http://auai.org/uai2018/proceedings/papers/35.pdf},
+    poster       = {UAI_2018_Poster.pdf},
+    slides       = {UAI_2018.pdf},
     sup          = {http://auai.org/uai2018/proceedings/supplements/Supplementary-Paper35.pdf},
     year         = {2018}
 }
 
 @inproceedings{amaral2018alberta,
-    abstract     = {A proper evaluation of techniques that require multiple training and evaluation
-                    executions of a benchmark, such as Feedback-Directed Optimization (FDO),
-                    requires multiple workloads that can be used to characterize variations on the
-                    behaviour of a program based on the workload. This paper aims to improve the
-                    performance evaluation of computer systems - including compilers, computer
-                    architecture simulation, and operating-system prototypes - that rely on the
-                    industrystandard SPEC CPU benchmark suite. A main concern with the use of this
-                    suite in research is that it is distributed with a very small number of
-                    workloads. This paper describes the process to create additional workloads for
-                    this suite and offers useful insights in many of its benchmarks. The set of
-                    additional workloads created, named the Alberta Workloads for the SPEC CPU 2017
-                    Benchmark Suite1 is made freely available with the goal of providing additional
-                    data points for the exploration of learning in computing systems. These
-                    workloads should also contribute to ameliorate the hidden learning problem
-                    where a researcher sets parameters to a system during development based on a
-                    set of benchmarks and then evaluates the system using the very same set of
-                    benchmarks with the very same workloads.},
+    abstract     = {A proper evaluation of techniques that require multiple training and
+                    evaluation executions of a benchmark, such as Feedback-Directed
+                    Optimization (FDO), requires multiple workloads that can be used to
+                    characterize variations on the behaviour of a program based on the
+                    workload. This paper aims to improve the performance evaluation of
+                    computer systems - including compilers, computer architecture
+                    simulation, and operating-system prototypes - that rely on the
+                    industrystandard SPEC CPU benchmark suite. A main concern with the use
+                    of this suite in research is that it is distributed with a very small
+                    number of workloads. This paper describes the process to create
+                    additional workloads for this suite and offers useful insights in many
+                    of its benchmarks. The set of additional workloads created, named the
+                    Alberta Workloads for the SPEC CPU 2017 Benchmark Suite1 is made freely
+                    available with the goal of providing additional data points for the
+                    exploration of learning in computing systems. These workloads should
+                    also contribute to ameliorate the hidden learning problem where a
+                    researcher sets parameters to a system during development based on a
+                    set of benchmarks and then evaluates the system using the very same set
+                    of benchmarks with the very same workloads.},
     author       = {Jos{\'{e}} Nelson Amaral and
                     Edson Borin and
                     Dylan R. Ashley and
@@ -212,32 +265,35 @@
 }
 
 @inproceedings{sherstan2018directly,
-    abstract     = {This paper investigates estimating the variance of a temporal-difference
-                    learning agent's update target. Most reinforcement learning methods use an
-                    estimate of the value function, which captures how good it is for the agent to
-                    be in a particular state and is mathematically expressed as the expected sum of
-                    discounted future rewards (called the return). These values can be
-                    straightforwardly estimated by averaging batches of returns using Monte Carlo
-                    methods. However, if we wish to update the agent's value estimates during
-                    learning--before terminal outcomes are observed--we must use a different
-                    estimation target called the {\lambda}-return, which truncates the return with
-                    the agent's own estimate of the value function. Temporal difference learning
-                    methods estimate the expected {\lambda}-return for each state, allowing these
-                    methods to update online and incrementally, and in most cases achieve better
-                    generalization error and faster learning than Monte Carlo methods. Naturally
-                    one could attempt to estimate higher-order moments of the {\lambda}-return.
-                    This paper is about estimating the variance of the {\lambda}-return. Prior work
-                    has shown that given estimates of the variance of the {\lambda}-return,
-                    learning systems can be constructed to (1) mitigate risk in action selection,
-                    and (2) automatically adapt the parameters of the learning process itself to
-                    improve performance. Unfortunately, existing methods for estimating the
-                    variance of the {\lambda}-return are complex and not well understood
-                    empirically. We contribute a method for estimating the variance of the
-                    {\lambda}-return directly using policy evaluation methods from reinforcement
-                    learning. Our approach is significantly simpler than prior methods that
-                    independently estimate the second moment of the {\lambda}-return. Empirically
-                    our new approach behaves at least as well as existing approaches, but is
-                    generally more robust.},
+    abstract     = {This paper investigates estimating the variance of a
+                    temporal-difference learning agent's update target. Most reinforcement
+                    learning methods use an estimate of the value function, which captures
+                    how good it is for the agent to be in a particular state and is
+                    mathematically expressed as the expected sum of discounted future
+                    rewards (called the return). These values can be straightforwardly
+                    estimated by averaging batches of returns using Monte Carlo methods.
+                    However, if we wish to update the agent's value estimates during
+                    learning--before terminal outcomes are observed--we must use a
+                    different estimation target called the {\lambda}-return, which
+                    truncates the return with the agent's own estimate of the value
+                    function. Temporal difference learning methods estimate the expected
+                    {\lambda}-return for each state, allowing these methods to update
+                    online and incrementally, and in most cases achieve better
+                    generalization error and faster learning than Monte Carlo methods.
+                    Naturally one could attempt to estimate higher-order moments of the
+                    {\lambda}-return. This paper is about estimating the variance of the
+                    {\lambda}-return. Prior work has shown that given estimates of the
+                    variance of the {\lambda}-return, learning systems can be constructed
+                    to (1) mitigate risk in action selection, and (2) automatically adapt
+                    the parameters of the learning process itself to improve performance.
+                    Unfortunately, existing methods for estimating the variance of the
+                    {\lambda}-return are complex and not well understood empirically. We
+                    contribute a method for estimating the variance of the {\lambda}-return
+                    directly using policy evaluation methods from reinforcement learning.
+                    Our approach is significantly simpler than prior methods that
+                    independently estimate the second moment of the {\lambda}-return.
+                    Empirically our new approach behaves at least as well as existing
+                    approaches, but is generally more robust.},
     author       = {Craig Sherstan and
                     Brendan Bennett and
                     Kenny Young and
