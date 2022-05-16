@@ -1,7 +1,105 @@
 ---
 ---
 
-@inproceedings{strupl2021rewardweighted,
+@inproceedings{strupl2022upsidedown,
+    abstract     = {Upside-Down Reinforcement Learning (UDRL) is an approach for solving RL
+                    problems that does not require value functions and uses only supervised
+                    learning, where the targets for given inputs in a dataset do not change
+                    over time. Ghosh et al. proved that Goal-Conditional Supervised
+                    Learning (GCSL) -- which can be viewed as a simplified version of UDRL
+                    -- optimizes a lower bound on goal-reaching performance. This raises
+                    expectations that such algorithms may enjoy guaranteed convergence to
+                    the optimal policy in arbitrary environments, similar to certain
+                    well-known traditional RL algorithms. Here we show that for a specific
+                    episodic UDRL algorithm (eUDRL, including GCSL), this is not the case,
+                    and give the causes of this limitation. To do so, we first introduce a
+                    helpful rewrite of eUDRL as a recursive policy update. This formulation
+                    helps to disprove its convergence to the optimal policy for a wide
+                    class of stochastic environments. Finally, we provide a concrete
+                    example of a very simple environment where eUDRL diverges. Since the
+                    primary aim of this paper is to present a negative result, and the best
+                    counterexamples are the simplest ones, we restrict all discussions to
+                    finite (discrete) environments, ignoring issues of function
+                    approximation and limited sample size.},
+    author       = {Miroslav \v{S}trupl and
+                    Francesco Faccio and
+                    Dylan R. Ashley and
+                    J\"{u}rgen Schmidhuber and
+                    Rupesh Kumar Srivastava},
+    title        = {Upside-Down Reinforcement Learning Can Diverge in Stochastic Environments With Episodic Resets},
+    arxiv        = {2202.11960},
+    booktitle    = {arXiv},
+    code         = {https://github.com/struplm/UDRL-GCSL-counterexample.git},
+    year         = {2022}
+}
+
+@inproceedings{ashley2022learning,
+    abstract     = {Lately, there has been a resurgence of interest in using supervised
+                    learning to solve reinforcement learning problems. Recent work in this
+                    area has largely focused on learning command-conditioned policies. We
+                    investigate the potential of one such method -- upside-down
+                    reinforcement learning -- to work with commands that specify a desired
+                    relationship between some scalar value and the observed return. We show
+                    that upside-down reinforcement learning can learn to carry out such
+                    commands online in a tabular bandit setting and in CartPole with
+                    non-linear function approximation. By doing so, we demonstrate the
+                    power of this family of methods and open the way for their practical
+                    use under more complicated command structures.},
+    author       = {Dylan R. Ashley and
+                    Kai Arulkumaran and
+                    J{\"u}rgen Schmidhuber and
+                    Rupesh Kumar Srivastava},
+    title        = {Learning Relative Return Policies With Upside-Down Reinforcement Learning},
+    arxiv        = {2202.12742},
+    booktitle    = {Proceedings of the Multidisciplinary Conference on Reinforcement Learning and Decision Making},
+    year         = {2022}
+}
+
+@inproceedings{arulkumaran2022all,
+    abstract     = {Upside down reinforcement learning (UDRL) flips the conventional use of
+                    the return in the objective function in RL upside down, by taking
+                    returns as input and predicting actions. UDRL is based purely on
+                    supervised learning, and bypasses some prominent issues in RL:
+                    bootstrapping, off-policy corrections, and discount factors. While
+                    previous work with UDRL demonstrated it in a traditional online RL
+                    setting, here we show that this single algorithm can also work in the
+                    imitation learning and offline RL settings, be extended to the
+                    goal-conditioned RL setting, and even the meta-RL setting. With a
+                    general agent architecture, a single UDRL agent can learn across all
+                    paradigms.},
+    author       = {Kai Arulkumaran and
+                    Dylan R. Ashley and
+                    J{\"u}rgen Schmidhuber and
+                    Rupesh Kumar Srivastava},
+    title        = {All You Need Is Supervised Learning: From Imitation Learning to Meta-RL With Upside Down RL},
+    arxiv        = {2202.11960},
+    booktitle    = {Proceedings of the Multidisciplinary Conference on Reinforcement Learning and Decision Making},
+    year         = {2022}
+}
+
+@inproceedings{ashley2021automatic,
+    abstract     = {We look at how machine learning techniques that derive properties of
+                    items in a collection of independent media can be used to automatically
+                    embed stories into such collections. To do so, we use models that
+                    extract the tempo of songs to make a music playlist follow a narrative
+                    arc. Our work specifies an open-source tool that uses pre-trained
+                    neural network models to extract the global tempo of a set of raw audio
+                    files and applies these measures to create a narrative-following
+                    playlist. This tool is available at
+                    https://github.com/dylanashley/playlist-story-builder/releases/tag/v1.0.0},
+    author       = {Dylan R. Ashley and
+                    Vincent Herrmann and
+                    Zachary Friggstad and
+                    Kory W. Mathewson and
+                    J{\"u}rgen Schmidhuber},
+    title        = {Automatic Embedding of Stories Into Collections of Independent Media},
+    arxiv        = {2111.02216},
+    booktitle    = {arXiv},
+    code         = {https://github.com/dylanashley/playlist-story-builder/releases/tag/v1.0.0},
+    year         = {2021}
+}
+
+@inproceedings{strupl2022rewardweighted,
     abstract     = {Reward-Weighted Regression (RWR) belongs to a family of widely known
                     iterative Reinforcement Learning algorithms based on the
                     Expectation-Maximization framework. In this family, learning at each
@@ -12,7 +110,9 @@
                     under which conditions RWR converges to the optimal policy have
                     remained open questions. In this paper, we provide for the first time a
                     proof that RWR converges to a global optimum when no function
-                    approximation is used.},
+                    approximation is used, in a general compact setting. Furthermore, for
+                    the simpler case with finite state and action spaces we prove R-linear
+                    convergence of the state-value function to the optimum.},
     author       = {Miroslav \v{S}trupl and
                     Francesco Faccio and
                     Dylan R. Ashley and
@@ -20,9 +120,9 @@
                     J\"{u}rgen Schmidhuber},
     title        = {Reward-Weighted Regression Converges to a Global Optimum},
     arxiv        = {2107.09088},
-    booktitle    = {arXiv},
+    booktitle    = {Proceedings of the {AAAI} Conference on Artificial Intelligence},
     code         = {https://github.com/dylanashley/reward-weighted-regression},
-    year         = {2021}
+    year         = {2022}
 }
 
 @inproceedings{ashley2021does,
