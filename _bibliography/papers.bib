@@ -1,7 +1,41 @@
 ---
 ---
 
+@inproceedings{ashley2022narrative,
+    author       = {Dylan R. Ashley and
+                    Vincent Herrmann and
+                    Zachary Friggstad and
+                    J{\"{u}}rgen Schmidhuber},
+    year         = {2022},
+    title        = {On Narrative Information and the Distillation of Stories},
+    abstract     = {The act of telling stories is a fundamental part of what it means to be
+                    human. This work introduces the concept of narrative information, which
+                    we define to be the overlap in information space between a story and
+                    the items that compose the story. Using contrastive learning methods,
+                    we show how modern artificial neural networks can be leveraged to
+                    distill stories and extract a representation of the narrative
+                    information. We then demonstrate how evolutionary algorithms can
+                    leverage this to extract a set of narrative templates and how these
+                    templates -- in tandem with a novel curve-fitting algorithm we
+                    introduce -- can reorder music albums to automatically induce stories
+                    in them. In the process of doing so, we give strong statistical
+                    evidence that these narrative information templates are present in
+                    existing albums. While we experiment only with music albums here, the
+                    premises of our work extend to any form of (largely) independent media.},
+    arxiv        = {2211.12423},
+    booktitle    = {Proceedings of the NeurIPS 2022 Workshop on Information-Theoretic Principles in Cognitive Systems},
+    code         = {https://github.com/dylanashley/story-distiller.git},
+    pdf          = {https://openreview.net/pdf?id=Q2xpIFubR8M},
+}
+
 @inproceedings{strupl2022upsidedown,
+    author       = {Miroslav {\v{S}}trupl and
+                    Francesco Faccio and
+                    Dylan R. Ashley and
+                    J{\"{u}}rgen Schmidhuber and
+                    Rupesh Kumar Srivastava},
+    year         = {2022},
+    title        = {Upside-Down Reinforcement Learning Can Diverge in Stochastic Environments With Episodic Resets},
     abstract     = {Upside-Down Reinforcement Learning (UDRL) is an approach for solving RL
                     problems that does not require value functions and uses only supervised
                     learning, where the targets for given inputs in a dataset do not change
@@ -21,19 +55,19 @@
                     counterexamples are the simplest ones, we restrict all discussions to
                     finite (discrete) environments, ignoring issues of function
                     approximation and limited sample size.},
-    author       = {Miroslav \v{S}trupl and
-                    Francesco Faccio and
-                    Dylan R. Ashley and
-                    J\"{u}rgen Schmidhuber and
-                    Rupesh Kumar Srivastava},
-    title        = {Upside-Down Reinforcement Learning Can Diverge in Stochastic Environments With Episodic Resets},
     arxiv        = {2202.11960},
     booktitle    = {arXiv},
     code         = {https://github.com/struplm/UDRL-GCSL-counterexample.git},
-    year         = {2022}
 }
 
 @inproceedings{ashley2022learning,
+
+    author       = {Dylan R. Ashley and
+                    Kai Arulkumaran and
+                    J{\"{u}}rgen Schmidhuber and
+                    Rupesh Kumar Srivastava},
+    year         = {2022},
+    title        = {Learning Relative Return Policies With Upside-Down Reinforcement Learning},
     abstract     = {Lately, there has been a resurgence of interest in using supervised
                     learning to solve reinforcement learning problems. Recent work in this
                     area has largely focused on learning command-conditioned policies. We
@@ -45,17 +79,17 @@
                     non-linear function approximation. By doing so, we demonstrate the
                     power of this family of methods and open the way for their practical
                     use under more complicated command structures.},
-    author       = {Dylan R. Ashley and
-                    Kai Arulkumaran and
-                    J{\"u}rgen Schmidhuber and
-                    Rupesh Kumar Srivastava},
-    title        = {Learning Relative Return Policies With Upside-Down Reinforcement Learning},
     arxiv        = {2202.12742},
     booktitle    = {Proceedings of the Multidisciplinary Conference on Reinforcement Learning and Decision Making},
-    year         = {2022}
 }
 
 @inproceedings{arulkumaran2022all,
+    author       = {Kai Arulkumaran and
+                    Dylan R. Ashley and
+                    J{\"{u}}rgen Schmidhuber and
+                    Rupesh Kumar Srivastava},
+    year         = {2022},
+    title        = {All You Need Is Supervised Learning: From Imitation Learning to Meta-RL With Upside Down RL},
     abstract     = {Upside down reinforcement learning (UDRL) flips the conventional use of
                     the return in the objective function in RL upside down, by taking
                     returns as input and predicting actions. UDRL is based purely on
@@ -67,17 +101,18 @@
                     goal-conditioned RL setting, and even the meta-RL setting. With a
                     general agent architecture, a single UDRL agent can learn across all
                     paradigms.},
-    author       = {Kai Arulkumaran and
-                    Dylan R. Ashley and
-                    J{\"u}rgen Schmidhuber and
-                    Rupesh Kumar Srivastava},
-    title        = {All You Need Is Supervised Learning: From Imitation Learning to Meta-RL With Upside Down RL},
     arxiv        = {2202.11960},
     booktitle    = {Proceedings of the Multidisciplinary Conference on Reinforcement Learning and Decision Making},
-    year         = {2022}
 }
 
 @inproceedings{ashley2021automatic,
+    author       = {Dylan R. Ashley and
+                    Vincent Herrmann and
+                    Zachary Friggstad and
+                    Kory W. Mathewson and
+                    J{\"{u}}rgen Schmidhuber},
+    year         = {2021},
+    title        = {Automatic Embedding of Stories Into Collections of Independent Media},
     abstract     = {We look at how machine learning techniques that derive properties of
                     items in a collection of independent media can be used to automatically
                     embed stories into such collections. To do so, we use models that
@@ -87,19 +122,19 @@
                     files and applies these measures to create a narrative-following
                     playlist. This tool is available at
                     https://github.com/dylanashley/playlist-story-builder/releases/tag/v1.0.0},
-    author       = {Dylan R. Ashley and
-                    Vincent Herrmann and
-                    Zachary Friggstad and
-                    Kory W. Mathewson and
-                    J{\"u}rgen Schmidhuber},
-    title        = {Automatic Embedding of Stories Into Collections of Independent Media},
     arxiv        = {2111.02216},
     booktitle    = {arXiv},
     code         = {https://github.com/dylanashley/playlist-story-builder/releases/tag/v1.0.0},
-    year         = {2021}
 }
 
 @inproceedings{strupl2022rewardweighted,
+    author       = {Miroslav {\v{S}}trupl and
+                    Francesco Faccio and
+                    Dylan R. Ashley and
+                    Rupesh Kumar Srivastava and
+                    J{\"{u}}rgen Schmidhuber},
+    year         = {2022},
+    title        = {Reward-Weighted Regression Converges to a Global Optimum},
     abstract     = {Reward-Weighted Regression (RWR) belongs to a family of widely known
                     iterative Reinforcement Learning algorithms based on the
                     Expectation-Maximization framework. In this family, learning at each
@@ -113,19 +148,17 @@
                     approximation is used, in a general compact setting. Furthermore, for
                     the simpler case with finite state and action spaces we prove R-linear
                     convergence of the state-value function to the optimum.},
-    author       = {Miroslav \v{S}trupl and
-                    Francesco Faccio and
-                    Dylan R. Ashley and
-                    Rupesh Kumar Srivastava and
-                    J\"{u}rgen Schmidhuber},
-    title        = {Reward-Weighted Regression Converges to a Global Optimum},
     arxiv        = {2107.09088},
     booktitle    = {Proceedings of the {AAAI} Conference on Artificial Intelligence},
     code         = {https://github.com/dylanashley/reward-weighted-regression},
-    year         = {2022}
 }
 
 @inproceedings{ashley2021does,
+    author       = {Dylan R. Ashley and
+                    Sina Ghiassian and
+                    Richard S. Sutton},
+    year         = {2021},
+    title        = {Does the Adam Optimizer Exacerbate Catastrophic Forgetting?},
     abstract     = {Catastrophic forgetting remains a severe hindrance to the broad
                     application of artificial neural networks (ANNs), however, it continues
                     to be a poorly understood phenomenon. Despite the extensive amount of
@@ -151,18 +184,18 @@
                     and relearning metrics concurrently, and intra-task forgetting in
                     reinforcement learning must-at the very least-be measured with pairwise
                     interference.},
-    author       = {Dylan R. Ashley and
-                    Sina Ghiassian and
-                    Richard S. Sutton},
-    title        = {Does the Adam Optimizer Exacerbate Catastrophic Forgetting?},
     arxiv        = {2102.07686},
     booktitle    = {arXiv},
     code         = {https://github.com/dylanashley/catastrophic-forgetting/tree/arxiv},
-    year         = {2021}
 }
 
 @inproceedings{ashley2021back,
-    abstract     = {We present AlphaChute: a state-of-the-art algorithm that achieves
+    author        = {Dylan R. Ashley and
+                     Anssi Kanervisto and
+                     Brendan Bennett},
+    year          = {2021},
+    title         = {Back to Square One: Superhuman Performance in Chutes and Ladders Through Deep Neural Networks and Tree Search},
+    abstract      = {We present AlphaChute: a state-of-the-art algorithm that achieves
                     superhuman performance in the ancient game of Chutes and Ladders. We
                     prove that our algorithm converges to the Nash equilibrium in constant
                     time, and therefore is--to the best of our knowledge--the first such
@@ -170,18 +203,16 @@
                     implementation of AlphaChute remains relatively straightforward due to
                     domain-specific adaptations. We provide the source code for AlphaChute
                     here in our Appendix.},
-    author        = {Dylan R. Ashley and
-                     Anssi Kanervisto and
-                     Brendan Bennett},
-    title         = {Back to Square One: Superhuman Performance in Chutes and Ladders Through Deep Neural Networks and Tree Search},
     arxiv         = {2104.00698},
     booktitle     = {Proceedings of the Conference of the {ACH} Special Interest Group on Harry Q. Bovik},
     code          = {https://github.com/Miffyli/mastering-chutes-and-ladders},
     pdf           = {http://sigbovik.org/2021/proceedings.pdf},
-    year          = {2021}
 }
 
 @article{ashley2020understanding,
+    author       = {Dylan R. Ashley},
+    year         = {2020},
+    title        = {Understanding Forgetting in Artificial Neural Networks},
     abstract     = {This thesis is offered as a step forward in our understanding of
                     forgetting in artificial neural networks. ANNs are a learning system
                     loosely based on our understanding of the brain and are responsible for
@@ -240,16 +271,19 @@
                     forward in our understanding of forgetting as it appears in ANNs. Such
                     an understanding is essential for realizing the full potential that
                     ANNs offer to the study of artificial intelligence.},
-    author       = {Dylan R. Ashley},
-    title        = {Understanding Forgetting in Artificial Neural Networks},
     code         = {https://github.com/dylanashley/catastrophic-forgetting},
     journal      = {Master’s thesis, University of Alberta},
     pdf          = {https://era.library.ualberta.ca/items/9b558c25-6120-4771-910e-85585abb7cc6},
     slides       = {MSc_thesis_slides.pdf},
-    year         = {2020}
 }
 
 @inproceedings{ma2020universal,
+    author       = {Chen Ma and
+                    Dylan R. Ashley and
+                    Junfeng Wen and
+                    Yoshua Bengio},
+    year         = {2020},
+    title        = {Universal Successor Features for Transfer Reinforcement Learning},
     abstract     = {Transfer in Reinforcement Learning (RL) refers to the idea of applying
                     knowledge gained from previous tasks to solving related tasks. Learning
                     a universal value function (Schaul et al., 2015), which generalizes
@@ -266,17 +300,17 @@
                     with two MuJoCo environments show that USFs can greatly accelerate
                     training when learning multiple tasks and can effectively transfer
                     knowledge to new tasks.},
-    author       = {Chen Ma and
-                    Dylan R. Ashley and
-                    Junfeng Wen and
-                    Yoshua Bengio},
-    title        = {Universal Successor Features for Transfer Reinforcement Learning},
     arxiv        = {2001.04025},
     booktitle    = {arXiv},
-    year         = {2020}
 }
 
 @inproceedings{ashley2019learning,
+    author       = {Dylan R. Ashley and
+                    Valliappa Chockalingam and
+                    Braedy Kuzma and
+                    Vadim Bulitko},
+    year         = {2019},
+    title        = {Learning to Select Mates in Evolving Non-playable Characters},
     abstract     = {Procedural content generation (PCG) is an active area of research with
                     the potential to significantly reduce game development costs as well as
                     create game experiences meaningfully personalized to each player.
@@ -294,18 +328,18 @@
                     Additionally, an inspection of the evolved preference function
                     parameters shows that agents evolve to favor mates who have survival
                     traits.},
+    booktitle    = {Proceedings of the {IEEE} Conference on Games},
+    pdf          = {http://ieee-cog.org/2019/papers/paper_66.pdf},
+    slides       = {IEEE_CoG_2019.pdf},
+}
+
+@inproceedings{ashley2019select,
     author       = {Dylan R. Ashley and
                     Valliappa Chockalingam and
                     Braedy Kuzma and
                     Vadim Bulitko},
-    title        = {Learning to Select Mates in Evolving Non-playable Characters},
-    booktitle    = {Proceedings of the {IEEE} Conference on Games},
-    pdf          = {http://ieee-cog.org/2019/papers/paper_66.pdf},
-    slides       = {IEEE_CoG_2019.pdf},
-    year         = {2019}
-}
-
-@inproceedings{ashley2019select,
+    year         = {2019},
+    title        = {Learning to Select Mates in Artificial Life},
     abstract     = {Artificial life (A-life) simulations present a natural way to study
                     interesting phenomena emerging in a population of evolving agents. In
                     this paper, we investigate whether allowing A-life agents to select
@@ -322,18 +356,21 @@
                     Additionally an inspection of the evolved preference function
                     parameters shows that agents evolve to favor mates who have survival
                     traits.},
-    author       = {Dylan R. Ashley and
-                    Valliappa Chockalingam and
-                    Braedy Kuzma and
-                    Vadim Bulitko},
-    title        = {Learning to Select Mates in Artificial Life},
     booktitle    = {Proceedings of the Genetic and Evolutionary Computation Conference Companion},
     code         = {https://dl.acm.org/ft_gateway.cfm?id=3322060&type=zip&path=%2F3330000%2F3322060%2Fsupp%2Fp103%2Dashley%5Fsuppl%2Ezip&supp=1&dwn=1},
     pdf          = {https://dl.acm.org/citation.cfm?id=3322060},
-    year         = {2019}
 }
 
 @inproceedings{sherstan2018comparing,
+    author       = {Craig Sherstan and
+                    Dylan R. Ashley and
+                    Brendan Bennett and
+                    Kenny Young and
+                    Adam White and
+                    Martha White and
+                    Richard S. Sutton},
+    year         = {2018},
+    title        = {Comparing Direct and Indirect Temporal-Difference Methods for Estimating the Variance of the Return},
     abstract     = {Temporal-difference (TD) learning methods are widely used in
                     reinforcement learning to estimate the expected return for each state,
                     without a model, because of their significant advantages in
@@ -355,24 +392,27 @@
                     function approximation case. Our experimental results show that our
                     direct method behaves just as well as a comparable indirect method, but
                     is generally more robust.},
-    author       = {Craig Sherstan and
-                    Dylan R. Ashley and
-                    Brendan Bennett and
-                    Kenny Young and
-                    Adam White and
-                    Martha White and
-                    Richard S. Sutton},
-    title        = {Comparing Direct and Indirect Temporal-Difference Methods for Estimating the Variance of the Return},
     booktitle    = {Proceedings of the Conference on Uncertainty in Artificial Intelligence},
     code         = {https://github.com/dylanashley/variance-learning},
     pdf          = {http://auai.org/uai2018/proceedings/papers/35.pdf},
     poster       = {UAI_2018_Poster.pdf},
     slides       = {UAI_2018.pdf},
     sup          = {http://auai.org/uai2018/proceedings/supplements/Supplementary-Paper35.pdf},
-    year         = {2018}
 }
 
 @inproceedings{amaral2018alberta,
+    author       = {Jos{\'{e}} Nelson Amaral and
+                    Edson Borin and
+                    Dylan R. Ashley and
+                    Caian Benedicto and
+                    Elliot Colp and
+                    Joao Henrique Stange Hoffmam and
+                    Marcus Karpoff and
+                    Erick Ochoa and
+                    Morgan Redshaw and
+                    Raphael Ernani Rodrigues},
+    year         = {2018},
+    title        = {The Alberta Workloads for the {SPEC} {CPU} 2017 Benchmark Suite},
     abstract     = {A proper evaluation of techniques that require multiple training and
                     evaluation executions of a benchmark, such as Feedback-Directed
                     Optimization (FDO), requires multiple workloads that can be used to
@@ -392,24 +432,21 @@
                     researcher sets parameters to a system during development based on a
                     set of benchmarks and then evaluates the system using the very same set
                     of benchmarks with the very same workloads.},
-    author       = {Jos{\'{e}} Nelson Amaral and
-                    Edson Borin and
-                    Dylan R. Ashley and
-                    Caian Benedicto and
-                    Elliot Colp and
-                    Joao Henrique Stange Hoffmam and
-                    Marcus Karpoff and
-                    Erick Ochoa and
-                    Morgan Redshaw and
-                    Raphael Ernani Rodrigues},
-    title        = {The Alberta Workloads for the {SPEC} {CPU} 2017 Benchmark Suite},
     booktitle    = {Proceedings of the {IEEE} International Symposium on Performance Analysis of Systems and Software},
     code         = {https://webdocs.cs.ualberta.ca/{\~}amaral/AlbertaWorkloadsForSPECCPU2017/},
     pdf          = {https://ieeexplore.ieee.org/abstract/document/8366950},
-    year         = {2018}
 }
 
 @inproceedings{sherstan2018directly,
+    author       = {Craig Sherstan and
+                    Brendan Bennett and
+                    Kenny Young and
+                    Dylan R. Ashley and
+                    Adam White and
+                    Martha White and
+                    Richard S. Sutton},
+    year         = {2018},
+    title        = {Directly Estimating the Variance of the {\lambda}-Return Using Temporal-Difference Methods},
     abstract     = {This paper investigates estimating the variance of a
                     temporal-difference learning agent's update target. Most reinforcement
                     learning methods use an estimate of the value function, which captures
@@ -439,15 +476,6 @@
                     independently estimate the second moment of the {\lambda}-return.
                     Empirically our new approach behaves at least as well as existing
                     approaches, but is generally more robust.},
-    author       = {Craig Sherstan and
-                    Brendan Bennett and
-                    Kenny Young and
-                    Dylan R. Ashley and
-                    Adam White and
-                    Martha White and
-                    Richard S. Sutton},
-    title        = {Directly Estimating the Variance of the {\lambda}-Return Using Temporal-Difference Methods},
     arxiv        = {1801.08287},
     booktitle    = {arXiv},
-    year         = {2018}
 }
