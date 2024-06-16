@@ -1,7 +1,164 @@
 ---
 ---
 
-@inproceedings{ashley2022narrative,
+@article{wang2024scaling,
+    author       = {Yuhui Wang and
+                    Qingyuan Wu and
+                    Weida Li and
+                    Dylan R. Ashley and
+                    Francesco Faccio and
+                    Chao Huang and
+                    J{\"{u}}rgen Schmidhuber},
+    year         = {2024},
+    title        = {Scaling Value Iteration Networks to 5000 Layers for Extreme Long-Term Planning},
+    abstract     = {The Value Iteration Network (VIN) is an end-to-end differentiable
+                    architecture that performs value iteration on a latent MDP for planning
+                    in reinforcement learning (RL). However, VINs struggle to scale to
+                    long-term and large-scale planning tasks, such as navigating a 100x100
+                    maze -- a task which typically requires thousands of planning steps to
+                    solve. We observe that this deficiency is due to two issues: the
+                    representation capacity of the latent MDP and the planning module's
+                    depth. We address these by augmenting the latent MDP with a dynamic
+                    transition kernel, dramatically improving its representational
+                    capacity, and, to mitigate the vanishing gradient problem, introducing
+                    an "adaptive highway loss" that constructs skip connections to improve
+                    gradient flow. We evaluate our method on both 2D maze navigation
+                    environments and the ViZDoom 3D navigation benchmark. We find that our
+                    new method, named Dynamic Transition VIN (DT-VIN), easily scales to
+                    5000 layers and casually solves challenging versions of the above
+                    tasks. Altogether, we believe that DT-VIN represents a concrete step
+                    forward in performing long-term large-scale planning in RL
+                    environments.},
+    arxiv        = {2406.08404},
+    journal      = {Submitted to the Thirty-Eighth Annual Conference on Neural Information Processing Systems},
+}
+
+@article{alhakami2024towards,
+    author       = {Mohannad Alhakami and
+                    Dylan R. Ashley and
+                    Joel Dunham and
+                    Francesco Faccio and
+                    Eric Feron and
+                    J{\"{u}}rgen Schmidhuber},
+    year         = {2024},
+    title        = {Towards a Robust Soft Baby Robot With Rich Interaction Ability for Advanced Machine Learning Algorithms},
+    abstract     = {Artificial intelligence has made great strides in many areas lately,
+                    yet it has had comparatively little success in general-use robotics. We
+                    believe one of the reasons for this is the disconnect between
+                    traditional robotic design and the properties needed for open-ended,
+                    creativity-based AI systems. To that end, we, taking selective
+                    inspiration from nature, build a robust, partially soft robotic limb
+                    with a large action space, rich sensory data stream from multiple
+                    cameras, and the ability to connect with others to enhance the action
+                    space and data stream. As a proof of concept, we train two contemporary
+                    machine learning algorithms to perform a simple target-finding task.
+                    Altogether, we believe that this design serves as a first step to
+                    building a robot tailor-made for achieving artificial general
+                    intelligence.},
+    arxiv        = {2404.08093},
+    code         = {https://github.com/dylanashley/robot-limb-testai},
+    journal      = {Submitted to the 2024 {IEEE/RSJ} International Conference on Intelligent Robots and Systems},
+}
+
+@article{stanic2023languini,
+    author       = {Aleksandar Stani{\'{c}} and
+                    Dylan R. Ashley and
+                    Oleg Serikov and
+                    Louis Kirsch and
+                    Francesco Faccio and
+                    J{\"{u}}rgen Schmidhuber and
+                    Thomas Hofmann and
+                    Imanol Schlag},
+    year         = {2023},
+    title        = {The Languini Kitchen: Enabling Language Modelling Research at Different Scales of Compute},
+    abstract     = {The Languini Kitchen serves as both a research collective and codebase
+                    designed to empower researchers with limited computational resources to
+                    contribute meaningfully to the field of language modelling. We
+                    introduce an experimental protocol that enables model comparisons based
+                    on equivalent compute, measured in accelerator hours. The number of
+                    tokens on which a model is trained is defined by the model's throughput
+                    and the chosen compute class. Notably, this approach avoids constraints
+                    on critical hyperparameters which affect total parameters or
+                    floating-point operations. For evaluation, we pre-process an existing
+                    large, diverse, and high-quality dataset of books that surpasses
+                    existing academic benchmarks in quality, diversity, and document
+                    length. On it, we compare methods based on their empirical scaling
+                    trends which are estimated through experiments at various levels of
+                    compute. This work also provides two baseline models: a feed-forward
+                    model derived from the GPT-2 architecture and a recurrent model in the
+                    form of a novel LSTM with ten-fold throughput. While the GPT baseline
+                    achieves better perplexity throughout all our levels of compute, our
+                    LSTM baseline exhibits a predictable and more favourable scaling law.
+                    This is due to the improved throughput and the need for fewer training
+                    tokens to achieve the same decrease in test perplexity. Extrapolating
+                    the scaling laws leads of both models results in an intersection at
+                    roughly 50,000 accelerator hours. We hope this work can serve as the
+                    foundation for meaningful and reproducible language modelling research.},
+    arxiv        = {2309.11197},
+    code         = {https://github.com/languini-kitchen/languini-kitchen},
+    journal      = {ar{X}iv},
+}
+
+@article{zhuge2023mindstorms,
+    author       = {Mingchen Zhuge and
+                    Haozhe Liu and
+                    Francesco Faccio and
+                    Dylan R. Ashley and
+                    R{\'{o}}bert Csord{\'{a}}s and
+                    Anand
+                    Gopalakrishnan and
+                    Abdullah Hamdi and
+                    Hasan Abed Al Kader Hammoud and
+                    Vincent Herrmann and
+                    Kazuki Irie and
+                    Louis Kirsch and
+                    Bing Li and
+                    Guohao Li and
+                    Shuming Liu and
+                    Jinjie Mai and
+                    Piotr Pi{\k{e}}kos and
+                    Aditya Ramesh and
+                    Imanol Schlag and
+                    Weimin Shi and
+                    Aleksandar Stani{\'{c}} and
+                    Wenyi Wang and
+                    Yuhui Wang and
+                    Mengmeng Xu and
+                    Deng-Ping Fan and
+                    Bernard Ghanem and
+                    J{\"{u}}rgen Schmidhuber},
+    year         = {2023},
+    title        = {Mindstorms in Natural Language-Based Societies of Mind},
+    abstract     = {Both Minsky's "society of mind" and Schmidhuber's "learning to think"
+                    inspire diverse societies of large multimodal neural networks (NNs)
+                    that solve problems by interviewing each other in a "mindstorm." Recent
+                    implementations of NN-based societies of minds consist of large
+                    language models (LLMs) and other NN-based experts communicating through
+                    a natural language interface. In doing so, they overcome the
+                    limitations of single LLMs, improving multimodal zero-shot reasoning.
+                    In these natural language-based societies of mind (NLSOMs), new agents
+                    -- all communicating through the same universal symbolic language --
+                    are easily added in a modular fashion. To demonstrate the power of
+                    NLSOMs, we assemble and experiment with several of them (having up to
+                    129 members), leveraging mindstorms in them to solve some practical AI
+                    tasks: visual question answering, image captioning, text-to-image
+                    synthesis, 3D generation, egocentric retrieval, embodied AI, and
+                    general language-based task solving. We view this as a starting point
+                    towards much larger NLSOMs with billions of agents-some of which may be
+                    humans. And with this emergence of great societies of heterogeneous
+                    minds, many new research questions have suddenly become paramount to
+                    the future of artificial intelligence. What should be the social
+                    structure of an NLSOM? What would be the (dis)advantages of having a
+                    monarchical rather than a democratic structure? How can principles of
+                    NN economies be used to maximize the total reward of a reinforcement
+                    learning NLSOM? In this work, we identify, discuss, and try to answer
+                    some of these questions.},
+    arxiv        = {2305.17066},
+    journal      = {Presented at the NeurIPS 2023 Workshop on Robustness of Zero/Few-Shot Learning in Foundation Models (Best-paper Award)},
+    poster       = {zhuge2023mindstorms_poster.pdf},
+}
+
+@article{ashley2022narrative,
     author       = {Dylan R. Ashley and
                     Vincent Herrmann and
                     Zachary Friggstad and
@@ -23,12 +180,13 @@
                     existing albums. While we experiment only with music albums here, the
                     premises of our work extend to any form of (largely) independent media.},
     arxiv        = {2211.12423},
-    booktitle    = {Proceedings of the NeurIPS 2022 Workshop on Information-Theoretic Principles in Cognitive Systems},
     code         = {https://github.com/dylanashley/story-distiller.git},
+    journal      = {Submitted to IEEE Transactions on Pattern Analysis and Machine Intelligence (previously presented at the NeurIPS 2023 Workshop on Machine Learning for Creativity and Design and at the NeurIPS 2022 Workshop Information-Theoretic Principles in Cognitive Systems},
     pdf          = {https://openreview.net/pdf?id=Q2xpIFubR8M},
+    poster       = {ashley2022narrative_poster.pdf},
 }
 
-@inproceedings{strupl2022upsidedown,
+@article{strupl2022upsidedown,
     author       = {Miroslav {\v{S}}trupl and
                     Francesco Faccio and
                     Dylan R. Ashley and
@@ -56,12 +214,11 @@
                     finite (discrete) environments, ignoring issues of function
                     approximation and limited sample size.},
     arxiv        = {2202.11960},
-    booktitle    = {arXiv},
     code         = {https://github.com/struplm/UDRL-GCSL-counterexample.git},
+    journal      = {Presented at the 5th Multidisciplinary Conference on Reinforcement Learning and Decision Making},
 }
 
-@inproceedings{ashley2022learning,
-
+@article{ashley2022learning,
     author       = {Dylan R. Ashley and
                     Kai Arulkumaran and
                     J{\"{u}}rgen Schmidhuber and
@@ -80,10 +237,10 @@
                     power of this family of methods and open the way for their practical
                     use under more complicated command structures.},
     arxiv        = {2202.12742},
-    booktitle    = {Proceedings of the Multidisciplinary Conference on Reinforcement Learning and Decision Making},
+    journal      = {Presented at the 5th Multidisciplinary Conference on Reinforcement Learning and Decision Making},
 }
 
-@inproceedings{arulkumaran2022all,
+@article{arulkumaran2022all,
     author       = {Kai Arulkumaran and
                     Dylan R. Ashley and
                     J{\"{u}}rgen Schmidhuber and
@@ -102,10 +259,10 @@
                     general agent architecture, a single UDRL agent can learn across all
                     paradigms.},
     arxiv        = {2202.11960},
-    booktitle    = {Proceedings of the Multidisciplinary Conference on Reinforcement Learning and Decision Making},
+    journal      = {Presented at the 5th Multidisciplinary Conference on Reinforcement Learning and Decision Making},
 }
 
-@inproceedings{ashley2021automatic,
+@article{ashley2021automatic,
     author       = {Dylan R. Ashley and
                     Vincent Herrmann and
                     Zachary Friggstad and
@@ -123,11 +280,11 @@
                     playlist. This tool is available at
                     https://github.com/dylanashley/playlist-story-builder/releases/tag/v1.0.0},
     arxiv        = {2111.02216},
-    booktitle    = {arXiv},
     code         = {https://github.com/dylanashley/playlist-story-builder/releases/tag/v1.0.0},
+    journal      = {ar{X}iv},
 }
 
-@inproceedings{strupl2022rewardweighted,
+@article{strupl2022rewardweighted,
     author       = {Miroslav {\v{S}}trupl and
                     Francesco Faccio and
                     Dylan R. Ashley and
@@ -149,11 +306,11 @@
                     the simpler case with finite state and action spaces we prove R-linear
                     convergence of the state-value function to the optimum.},
     arxiv        = {2107.09088},
-    booktitle    = {Proceedings of the {AAAI} Conference on Artificial Intelligence},
     code         = {https://github.com/dylanashley/reward-weighted-regression},
+    journal      = {Proceedings of the Thirty-Sixth {AAAI} Conference on Artificial Intelligence},
 }
 
-@inproceedings{ashley2021does,
+@article{ashley2021does,
     author       = {Dylan R. Ashley and
                     Sina Ghiassian and
                     Richard S. Sutton},
@@ -185,11 +342,11 @@
                     reinforcement learning must-at the very least-be measured with pairwise
                     interference.},
     arxiv        = {2102.07686},
-    booktitle    = {arXiv},
     code         = {https://github.com/dylanashley/catastrophic-forgetting/tree/arxiv},
+    journal      = {ar{X}iv},
 }
 
-@inproceedings{ashley2021back,
+@article{ashley2021back,
     author        = {Dylan R. Ashley and
                      Anssi Kanervisto and
                      Brendan Bennett},
@@ -204,8 +361,8 @@
                     domain-specific adaptations. We provide the source code for AlphaChute
                     here in our Appendix.},
     arxiv         = {2104.00698},
-    booktitle     = {Proceedings of the Conference of the {ACH} Special Interest Group on Harry Q. Bovik},
     code          = {https://github.com/Miffyli/mastering-chutes-and-ladders},
+    journal       = {Proceedings of the 2021 Conference of the {ACH} Special Interest Group on Harry Q. Bovik},
     pdf           = {http://sigbovik.org/2021/proceedings.pdf},
 }
 
@@ -272,12 +429,12 @@
                     an understanding is essential for realizing the full potential that
                     ANNs offer to the study of artificial intelligence.},
     code         = {https://github.com/dylanashley/catastrophic-forgetting},
-    journal      = {Master’s thesis, University of Alberta},
+    journal      = {Master's thesis, University of Alberta},
     pdf          = {https://era.library.ualberta.ca/items/9b558c25-6120-4771-910e-85585abb7cc6},
-    slides       = {MSc_thesis_slides.pdf},
+    slides       = {ashley2020understanding_slides.pdf},
 }
 
-@inproceedings{ma2020universal,
+@article{ma2020universal,
     author       = {Chen Ma and
                     Dylan R. Ashley and
                     Junfeng Wen and
@@ -301,10 +458,10 @@
                     training when learning multiple tasks and can effectively transfer
                     knowledge to new tasks.},
     arxiv        = {2001.04025},
-    booktitle    = {arXiv},
+    journal      = {ar{X}iv},
 }
 
-@inproceedings{ashley2019learning,
+@article{ashley2019learning,
     author       = {Dylan R. Ashley and
                     Valliappa Chockalingam and
                     Braedy Kuzma and
@@ -328,12 +485,12 @@
                     Additionally, an inspection of the evolved preference function
                     parameters shows that agents evolve to favor mates who have survival
                     traits.},
-    booktitle    = {Proceedings of the {IEEE} Conference on Games},
+    journal      = {Proceedings of the 2019 {IEEE} Conference on Games},
     pdf          = {http://ieee-cog.org/2019/papers/paper_66.pdf},
-    slides       = {IEEE_CoG_2019.pdf},
+    slides       = {ashley2019learning_slides.pdf},
 }
 
-@inproceedings{ashley2019select,
+@article{ashley2019select,
     author       = {Dylan R. Ashley and
                     Valliappa Chockalingam and
                     Braedy Kuzma and
@@ -356,12 +513,12 @@
                     Additionally an inspection of the evolved preference function
                     parameters shows that agents evolve to favor mates who have survival
                     traits.},
-    booktitle    = {Proceedings of the Genetic and Evolutionary Computation Conference Companion},
     code         = {https://dl.acm.org/ft_gateway.cfm?id=3322060&type=zip&path=%2F3330000%2F3322060%2Fsupp%2Fp103%2Dashley%5Fsuppl%2Ezip&supp=1&dwn=1},
+    journal      = {Proceedings of the Genetic and Evolutionary Computation Conference Companion},
     pdf          = {https://dl.acm.org/citation.cfm?id=3322060},
 }
 
-@inproceedings{sherstan2018comparing,
+@article{sherstan2018comparing,
     author       = {Craig Sherstan and
                     Dylan R. Ashley and
                     Brendan Bennett and
@@ -382,7 +539,7 @@
                     2016. We show that two TD learners operating in series can learn
                     expectation and variance estimates. The trick is to use the square of
                     the TD error of the expectation learner as the reward of the variance
-                    learner, and the square of the expectation learner’s discount rate as
+                    learner, and the square of the expectation learner's discount rate as
                     the discount rate of the variance learner. With these two
                     modifications, the variance learning problem becomes a conventional TD
                     learning problem to which standard theoretical results can be applied.
@@ -392,15 +549,15 @@
                     function approximation case. Our experimental results show that our
                     direct method behaves just as well as a comparable indirect method, but
                     is generally more robust.},
-    booktitle    = {Proceedings of the Conference on Uncertainty in Artificial Intelligence},
     code         = {https://github.com/dylanashley/variance-learning},
+    journal      = {Proceedings of the 34th Conference on Uncertainty in Artificial Intelligence},
     pdf          = {http://auai.org/uai2018/proceedings/papers/35.pdf},
-    poster       = {UAI_2018_Poster.pdf},
-    slides       = {UAI_2018.pdf},
+    poster       = {sherstan2018comparing_poster.pdf},
+    slides       = {sherstan2018comparing_slides.pdf},
     sup          = {http://auai.org/uai2018/proceedings/supplements/Supplementary-Paper35.pdf},
 }
 
-@inproceedings{amaral2018alberta,
+@article{amaral2018alberta,
     author       = {Jos{\'{e}} Nelson Amaral and
                     Edson Borin and
                     Dylan R. Ashley and
@@ -432,12 +589,12 @@
                     researcher sets parameters to a system during development based on a
                     set of benchmarks and then evaluates the system using the very same set
                     of benchmarks with the very same workloads.},
-    booktitle    = {Proceedings of the {IEEE} International Symposium on Performance Analysis of Systems and Software},
     code         = {https://webdocs.cs.ualberta.ca/{\~}amaral/AlbertaWorkloadsForSPECCPU2017/},
+    journal      = {Proceedings of the 2018 {IEEE} International Symposium on Performance Analysis of Systems and Software},
     pdf          = {https://ieeexplore.ieee.org/abstract/document/8366950},
 }
 
-@inproceedings{sherstan2018directly,
+@article{sherstan2018directly,
     author       = {Craig Sherstan and
                     Brendan Bennett and
                     Kenny Young and
@@ -477,5 +634,5 @@
                     Empirically our new approach behaves at least as well as existing
                     approaches, but is generally more robust.},
     arxiv        = {1801.08287},
-    booktitle    = {arXiv},
+    journal      = {ar{X}iv},
 }

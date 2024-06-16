@@ -17,8 +17,8 @@
     text-align: right;
 }
 .bibliography {
-    margin-bottom: 50px;
-    margin-top: 20px;
+    margin-bottom: 40px;
+    margin-top: 40px;
     list-style-type: circle;
 
     li {
@@ -26,8 +26,13 @@
         position: relative;
 
         span { display: block; }
-        .title { font-weight: bolder; }
+        .title {
+            font-weight: bolder;
+            margin: 0 0 3px;
+        }
         .author {
+            margin: 0 0 3px;
+
             a {
                 border-bottom: 1px dashed $theme-color;
                 &:hover {
@@ -39,6 +44,9 @@
                 border-bottom: 1px solid;
                 font-style: normal;
             }
+        }
+        .periodical {
+            margin: 0 0 3px;
         }
         a.abstract, a.bibtex { cursor: pointer; }
         .hidden {

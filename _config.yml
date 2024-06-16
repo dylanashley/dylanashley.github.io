@@ -2,16 +2,15 @@
 # Site settings
 # -----------------------------------------------------------------------------
 name: Dylan Ashley
-email: dylanashley@dylanashley.io
+email: mail@dylanashley.io
 description: >
   The personal website of Dylan Ashley.
 footer_text: >
-  Powered by <a href="http://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
-  Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
+  Based on the <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
 
 url:
 baseurl:
-last_updated: 2023-02-16
+last_updated: 2024-06-16
 
 # -----------------------------------------------------------------------------
 # Open Graph
@@ -28,12 +27,12 @@ og_image: # The site-wide (default for all links) Open Graph preview image
 github_username: dylanashley
 twitter_username: oneDylanAshley
 linkedin_username: dylan-robert-ashley
-scholar_userid: E-NJpHYAAAAJ
+scholar_userid: DDxCaIsAAAAJ
 orcid_id: 0000-0001-6148-8802
 medium_username:
 quora_username:
 publons_id:
-research_gate_profile: Dylan_Ashley
+research_gate_profile:
 blogger_url:
 
 contact_note: >
