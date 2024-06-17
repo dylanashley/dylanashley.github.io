@@ -22,16 +22,16 @@
     list-style-type: circle;
 
     li {
-        margin: 10px 0;
+        margin: 12px 0;
         position: relative;
 
         span { display: block; }
         .title {
             font-weight: bolder;
-            margin: 0 0 3px;
+            margin: 0 0 2px;
         }
         .author {
-            margin: 0 0 3px;
+            margin: 0 0 2px;
 
             a {
                 border-bottom: 1px dashed $theme-color;
@@ -46,7 +46,7 @@
             }
         }
         .periodical {
-            margin: 0 0 3px;
+            margin: 0 0 2px;
         }
         a.abstract, a.bibtex { cursor: pointer; }
         .hidden {

@@ -82,6 +82,9 @@
   {% if entry.slides %}
     [<a href="{{ entry.slides | prepend: '/assets/pdf/' | prepend: site.baseurl | prepend: site.url }}" target="_blank">Slides</a>]
   {% endif %}
+  {% if entry.bibtex %}
+    [<a href="{{ entry.bibtex | prepend: '/assets/bib/' | prepend: site.baseurl | prepend: site.url }}" target="_blank">BibTeX</a>]
+  {% endif %}
   </span>
 
   <!-- Hidden abstract block -->
