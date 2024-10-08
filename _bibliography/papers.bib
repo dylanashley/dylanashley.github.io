@@ -12,65 +12,162 @@
     year         = {2024},
     title        = {Scaling Value Iteration Networks to 5000 Layers for Extreme Long-Term Planning},
     abstract     = {The Value Iteration Network (VIN) is an end-to-end differentiable
-                    architecture that performs value iteration on a latent MDP for planning
-                    in reinforcement learning (RL). However, VINs struggle to scale to
-                    long-term and large-scale planning tasks, such as navigating a 100x100
-                    maze -- a task which typically requires thousands of planning steps to
-                    solve. We observe that this deficiency is due to two issues: the
-                    representation capacity of the latent MDP and the planning module's
-                    depth. We address these by augmenting the latent MDP with a dynamic
-                    transition kernel, dramatically improving its representational
-                    capacity, and, to mitigate the vanishing gradient problem, introducing
-                    an "adaptive highway loss" that constructs skip connections to improve
-                    gradient flow. We evaluate our method on both 2D maze navigation
-                    environments and the ViZDoom 3D navigation benchmark. We find that our
-                    new method, named Dynamic Transition VIN (DT-VIN), easily scales to
-                    5000 layers and casually solves challenging versions of the above
-                    tasks. Altogether, we believe that DT-VIN represents a concrete step
-                    forward in performing long-term large-scale planning in RL
-                    environments.},
+                    architecture that performs value iteration on a latent Markov Decision
+                    Process (MDP) for planning in reinforcement learning (RL). However, VINs
+                    struggle to scale to long-term and large-scale planning tasks, such as
+                    navigating a 100x100 maze -- a task that typically requires thousands of
+                    planning steps to solve. We observe that this deficiency is due to two
+                    issues: the representation capacity of the latent MDP and the planning
+                    module's depth. We address these by augmenting the latent MDP with a
+                    dynamic transition kernel, dramatically improving its representational
+                    capacity, and, to mitigate the vanishing gradient problem, introduce an
+                    "adaptive highway loss" that constructs skip connections to improve
+                    gradient flow. We evaluate our method on 2D maze navigation
+                    environments, the ViZDoom 3D navigation benchmark, and the real-world
+                    Lunar rover navigation task. We find that our new method, named Dynamic
+                    Transition VIN (DT-VIN), scales to 5000 layers and solves challenging
+                    versions of the above tasks. Altogether, we believe that DT-VIN
+                    represents a concrete step forward in performing long-term large-scale
+                    planning in RL environments.},
     arxiv        = {2406.08404},
     bibtex       = {wang2024scaling.bib},
-    journal      = {Submitted to the Thirty-Eighth Annual Conference on Neural Information Processing Systems},
+    journal      = {Submitted to the 13th International Conference on Learning Representations and previously presented at the 17th European Workshop on Reinforcement Learning},
 }
 
 @article{alhakami2024towards,
-    author       = {Mohannad Alhakami and
-                    Dylan R. Ashley and
-                    Joel Dunham and
+    author       = {Mohannad Alhakami* and
+                    Dylan R. Ashley* and
+                    Joel Dunham* and
+                    Yanning Dai and
                     Francesco Faccio and
                     Eric Feron and
                     J{\"{u}}rgen Schmidhuber},
     year         = {2024},
-    title        = {Towards a Robust Soft Baby Robot With Rich Interaction Ability for Advanced Machine Learning Algorithms},
-    abstract     = {Artificial intelligence has made great strides in many areas lately,
-                    yet it has had comparatively little success in general-use robotics. We
-                    believe one of the reasons for this is the disconnect between
-                    traditional robotic design and the properties needed for open-ended,
-                    creativity-based AI systems. To that end, we, taking selective
-                    inspiration from nature, build a robust, partially soft robotic limb
-                    with a large action space, rich sensory data stream from multiple
-                    cameras, and the ability to connect with others to enhance the action
-                    space and data stream. As a proof of concept, we train two contemporary
-                    machine learning algorithms to perform a simple target-finding task.
-                    Altogether, we believe that this design serves as a first step to
-                    building a robot tailor-made for achieving artificial general
-                    intelligence.},
+    title        = {Towards an Extremely Robust Baby Robot With Rich Interaction Ability for Advanced Machine Learning Algorithms},
+    abstract     = {Advanced machine learning algorithms require platforms that are
+                    extremely robust and equipped with rich sensory feedback to handle
+                    extensive trial-and-error learning without relying on strong inductive
+                    biases. Traditional robotic designs, while well-suited for their
+                    specific use cases, are often fragile when used with these algorithms.
+                    To address this gap -- and inspired by the vision of enabling
+                    curiosity-driven baby robots -- we present a novel robotic limb designed
+                    from scratch. Our design has a hybrid soft-hard structure, high
+                    redundancy with rich non-contact sensors (exclusively cameras), and
+                    easily replaceable failure points. Proof-of-concept experiments using
+                    two contemporary reinforcement learning algorithms on a physical
+                    prototype demonstrate that our design is able to succeed in a simple
+                    target-finding task even under simulated sensor failures, all with
+                    minimal human oversight during extended learning periods. We believe
+                    this design represents a concrete step toward more tailored robotic
+                    designs for achieving general-purpose, generally intelligent robots.},
     arxiv        = {2404.08093},
     bibtex       = {alhakami2024towards.bib},
     code         = {https://github.com/dylanashley/robot-limb-testai},
-    journal      = {Submitted to the 2024 {IEEE/RSJ} International Conference on Intelligent Robots and Systems},
+    journal      = {Submitted to the 2025 {IEEE} International Conference on Robotics \& Automation and previously presented as a late-breaking result at the 2024 {IEEE/RSJ} International Conference on Intelligent Robots and Systems},
+    poster       = {alhakami2024towards_poster.pdf},
+}
+
+@article{ashley2024narrative,
+    author       = {Dylan R. Ashley* and
+                    Vincent Herrmann* and
+                    Zachary Friggstad and
+                    J{\"{u}}rgen Schmidhuber},
+    year         = {2024},
+    title        = {On the Distillation of Stories for Transferring Narrative Arcs in Collections of Independent Media},
+    abstract     = {The act of telling stories is a fundamental part of what it means to be
+                    human. This work introduces the concept of narrative information, which
+                    we define as the overlap in information space between a story and the
+                    items that compose the story. Using contrastive learning methods, we
+                    show how modern artificial neural networks can be leveraged to distill
+                    stories and extract a representation of the narrative information. We
+                    then demonstrate how evolutionary algorithms can leverage this to
+                    extract a set of narrative template curves and how these -- in tandem
+                    with a novel curve-fitting algorithm we introduce -- can reorder music
+                    albums to automatically induce stories in them. In doing so, we give
+                    statistically significant evidence that (1) these narrative information
+                    template curves are present in existing albums and that (2) people
+                    prefer an album ordered through one of these learned template curves
+                    over a random one. The premises of our work extend to any form of
+                    (largely) independent media, and as evidence, we also show that our
+                    method works with image data.},
+    arxiv        = {2211.12423},
+    bibtex       = {ashley2022narrative.bib},
+    code         = {https://github.com/dylanashley/story-distiller.git},
+    journal      = {Published in {IEEE} Transactions on Pattern Analysis and Machine Intelligence (IF 20.8) and previously presented at the {NeurIPS} 2023 Workshop on Machine Learning for Creativity and Design and at the {NeurIPS} 2022 Workshop Information-Theoretic Principles in Cognitive Systems)},
+    pdf          = {https://openreview.net/pdf?id=Q2xpIFubR8M},
+    poster       = {ashley2022narrative_poster.pdf},
+}
+
+@article{zhuge2024mindstorms,
+    author       = {Mingchen Zhuge* and
+                    Haozhe Liu* and
+                    Francesco Faccio* and
+                    Dylan R. Ashley* and
+                    R{\'{o}}bert Csord{\'{a}}s and
+                    Anand
+                    Gopalakrishnan and
+                    Abdullah Hamdi and
+                    Hasan Abed Al Kader Hammoud and
+                    Vincent Herrmann and
+                    Kazuki Irie and
+                    Louis Kirsch and
+                    Bing Li and
+                    Guohao Li and
+                    Shuming Liu and
+                    Jinjie Mai and
+                    Piotr Pi{\k{e}}kos and
+                    Aditya Ramesh and
+                    Imanol Schlag and
+                    Weimin Shi and
+                    Aleksandar Stani{\'{c}} and
+                    Wenyi Wang and
+                    Yuhui Wang and
+                    Mengmeng Xu and
+                    Deng-Ping Fan and
+                    Bernard Ghanem and
+                    J{\"{u}}rgen Schmidhuber},
+    year         = {2024},
+    title        = {Mindstorms in Natural Language-Based Societies of Mind},
+    abstract     = {Both Minsky's "society of mind" and Schmidhuber's "learning to think"
+                    inspire diverse societies of large multimodal neural networks (NNs)
+                    that solve problems by interviewing each other in a "mindstorm." Recent
+                    implementations of NN-based societies of minds consist of large
+                    language models (LLMs) and other NN-based experts communicating through
+                    a natural language interface. In doing so, they overcome the
+                    limitations of single LLMs, improving multimodal zero-shot reasoning.
+                    In these natural language-based societies of mind (NLSOMs), new agents
+                    -- all communicating through the same universal symbolic language --
+                    are easily added in a modular fashion. To demonstrate the power of
+                    NLSOMs, we assemble and experiment with several of them (having up to
+                    129 members), leveraging mindstorms in them to solve some practical AI
+                    tasks: visual question answering, image captioning, text-to-image
+                    synthesis, 3D generation, egocentric retrieval, embodied AI, and
+                    general language-based task solving. We view this as a starting point
+                    towards much larger NLSOMs with billions of agents-some of which may be
+                    humans. And with this emergence of great societies of heterogeneous
+                    minds, many new research questions have suddenly become paramount to
+                    the future of artificial intelligence. What should be the social
+                    structure of an NLSOM? What would be the (dis)advantages of having a
+                    monarchical rather than a democratic structure? How can principles of
+                    NN economies be used to maximize the total reward of a reinforcement
+                    learning NLSOM? In this work, we identify, discuss, and try to answer
+                    some of these questions.},
+    arxiv        = {2305.17066},
+    bibtex       = {zhuge2023mindstorms.bib},
+    journal      = {Published in Computational Visual Media (IF 17.3) and previously presented at the {NeurIPS} 2023 Workshop on Robustness of Zero/Few-Shot Learning in Foundation Models (Best-Paper Award)},
+    poster       = {zhuge2023mindstorms_poster.pdf},
+    slides       = {zhuge2023mindstorms_slides.pdf},
 }
 
 @article{stanic2023languini,
-    author       = {Aleksandar Stani{\'{c}} and
+    author       = {Aleksandar Stani{\'{c}}* and
                     Dylan R. Ashley and
                     Oleg Serikov and
                     Louis Kirsch and
                     Francesco Faccio and
                     J{\"{u}}rgen Schmidhuber and
                     Thomas Hofmann and
-                    Imanol Schlag},
+                    Imanol Schlag*},
     year         = {2023},
     title        = {The Languini Kitchen: Enabling Language Modelling Research at Different Scales of Compute},
     abstract     = {The Languini Kitchen serves as both a research collective and codebase
@@ -100,96 +197,6 @@
     bibtex       = {stanic2023languini.bib},
     code         = {https://github.com/languini-kitchen/languini-kitchen},
     journal      = {Preprint on ar{X}iv},
-}
-
-@article{zhuge2023mindstorms,
-    author       = {Mingchen Zhuge and
-                    Haozhe Liu and
-                    Francesco Faccio and
-                    Dylan R. Ashley and
-                    R{\'{o}}bert Csord{\'{a}}s and
-                    Anand
-                    Gopalakrishnan and
-                    Abdullah Hamdi and
-                    Hasan Abed Al Kader Hammoud and
-                    Vincent Herrmann and
-                    Kazuki Irie and
-                    Louis Kirsch and
-                    Bing Li and
-                    Guohao Li and
-                    Shuming Liu and
-                    Jinjie Mai and
-                    Piotr Pi{\k{e}}kos and
-                    Aditya Ramesh and
-                    Imanol Schlag and
-                    Weimin Shi and
-                    Aleksandar Stani{\'{c}} and
-                    Wenyi Wang and
-                    Yuhui Wang and
-                    Mengmeng Xu and
-                    Deng-Ping Fan and
-                    Bernard Ghanem and
-                    J{\"{u}}rgen Schmidhuber},
-    year         = {2023},
-    title        = {Mindstorms in Natural Language-Based Societies of Mind},
-    abstract     = {Both Minsky's "society of mind" and Schmidhuber's "learning to think"
-                    inspire diverse societies of large multimodal neural networks (NNs)
-                    that solve problems by interviewing each other in a "mindstorm." Recent
-                    implementations of NN-based societies of minds consist of large
-                    language models (LLMs) and other NN-based experts communicating through
-                    a natural language interface. In doing so, they overcome the
-                    limitations of single LLMs, improving multimodal zero-shot reasoning.
-                    In these natural language-based societies of mind (NLSOMs), new agents
-                    -- all communicating through the same universal symbolic language --
-                    are easily added in a modular fashion. To demonstrate the power of
-                    NLSOMs, we assemble and experiment with several of them (having up to
-                    129 members), leveraging mindstorms in them to solve some practical AI
-                    tasks: visual question answering, image captioning, text-to-image
-                    synthesis, 3D generation, egocentric retrieval, embodied AI, and
-                    general language-based task solving. We view this as a starting point
-                    towards much larger NLSOMs with billions of agents-some of which may be
-                    humans. And with this emergence of great societies of heterogeneous
-                    minds, many new research questions have suddenly become paramount to
-                    the future of artificial intelligence. What should be the social
-                    structure of an NLSOM? What would be the (dis)advantages of having a
-                    monarchical rather than a democratic structure? How can principles of
-                    NN economies be used to maximize the total reward of a reinforcement
-                    learning NLSOM? In this work, we identify, discuss, and try to answer
-                    some of these questions.},
-    arxiv        = {2305.17066},
-    bibtex       = {zhuge2023mindstorms.bib},
-    journal      = {Presented at the NeurIPS 2023 Workshop on Robustness of Zero/Few-Shot Learning in Foundation Models (Best-Paper Award)},
-    poster       = {zhuge2023mindstorms_poster.pdf},
-    slides       = {zhuge2023mindstorms_slides.pdf},
-}
-
-@article{ashley2022narrative,
-    author       = {Dylan R. Ashley and
-                    Vincent Herrmann and
-                    Zachary Friggstad and
-                    J{\"{u}}rgen Schmidhuber},
-    year         = {2022},
-    title        = {On Narrative Information and the Distillation of Stories},
-    abstract     = {The act of telling stories is a fundamental part of what it means to be
-                    human. This work introduces the concept of narrative information, which
-                    we define to be the overlap in information space between a story and
-                    the items that compose the story. Using contrastive learning methods,
-                    we show how modern artificial neural networks can be leveraged to
-                    distill stories and extract a representation of the narrative
-                    information. We then demonstrate how evolutionary algorithms can
-                    leverage this to extract a set of narrative templates and how these
-                    templates -- in tandem with a novel curve-fitting algorithm we
-                    introduce -- can reorder music albums to automatically induce stories
-                    in them. In the process of doing so, we give strong statistical
-                    evidence that these narrative information templates are present in
-                    existing albums. While we experiment only with music albums here, the
-                    premises of our work extend to any form of (largely) independent media.},
-    arxiv        = {2211.12423},
-    bibtex       = {ashley2022narrative.bib},
-    code         = {https://github.com/dylanashley/story-distiller.git},
-    journal      = {Submitted to IEEE Transactions on Pattern Analysis and Machine Intelligence (previously presented at the NeurIPS 2023 Workshop on Machine Learning for Creativity and Design and at the NeurIPS 2022 Workshop Information-Theoretic Principles in Cognitive Systems)},
-    pdf          = {https://openreview.net/pdf?id=Q2xpIFubR8M},
-    poster       = {ashley2022narrative_poster.pdf},
 }
 
 @article{strupl2022upsidedown,
@@ -364,9 +371,9 @@
 }
 
 @article{ashley2021back,
-    author       = {Dylan R. Ashley and
-                    Anssi Kanervisto and
-                    Brendan Bennett},
+    author       = {Dylan R. Ashley* and
+                    Anssi Kanervisto* and
+                    Brendan Bennett*},
     year         = {2021},
     title        = {Back to Square One: Superhuman Performance in Chutes and Ladders Through Deep Neural Networks and Tree Search},
     abstract     = {We present AlphaChute: a state-of-the-art algorithm that achieves
@@ -482,9 +489,9 @@
 }
 
 @article{ashley2019learning,
-    author       = {Dylan R. Ashley and
-                    Valliappa Chockalingam and
-                    Braedy Kuzma and
+    author       = {Dylan R. Ashley* and
+                    Valliappa Chockalingam* and
+                    Braedy Kuzma* and
                     Vadim Bulitko},
     year         = {2019},
     title        = {Learning to Select Mates in Evolving Non-playable Characters},
@@ -512,9 +519,9 @@
 }
 
 @article{ashley2019select,
-    author       = {Dylan R. Ashley and
-                    Valliappa Chockalingam and
-                    Braedy Kuzma and
+    author       = {Dylan R. Ashley* and
+                    Valliappa Chockalingam* and
+                    Braedy Kuzma* and
                     Vadim Bulitko},
     year         = {2019},
     title        = {Learning to Select Mates in Artificial Life},
