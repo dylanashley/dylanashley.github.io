@@ -1,6 +1,114 @@
 ---
 ---
 
+@article{wang2024how,
+    author       = {Wenyi Wang* and
+                    Hisham A. Alyahya* and
+                    Dylan R. Ashley and
+                    Oleg Serikov and
+                    Dmitrii Khizbullin and
+                    Francesco Faccio and
+                    J{\"{u}}rgen Schmidhuber},
+    year         = {2024},
+    title        = {How to Correctly do Semantic Backpropagation on Language-based Agentic Systems},
+    abstract     = {Language-based agentic systems have shown great promise in recent years,
+                    transitioning from solving small-scale research problems to being
+                    deployed in challenging real-world tasks. However, optimizing these
+                    systems often requires substantial manual labor. Recent studies have
+                    demonstrated that these systems can be represented as computational
+                    graphs, enabling automatic optimization. Despite these advancements,
+                    most current efforts in Graph-based Agentic System Optimization (GASO)
+                    fail to properly assign feedback to the system's components given
+                    feedback on the system's output. To address this challenge, we formalize
+                    the concept of semantic backpropagation with semantic gradients -- a
+                    generalization that aligns several key optimization techniques,
+                    including reverse-mode automatic differentiation and the more recent
+                    TextGrad by exploiting the relationship among nodes with a common
+                    successor. This serves as a method for computing directional information
+                    about how changes to each component of an agentic system might improve
+                    the system's output. To use these gradients, we propose a method called
+                    semantic gradient descent which enables us to solve GASO effectively.
+                    Our results on both BIG-Bench Hard and GSM8K show that our approach
+                    outperforms existing state-of-the-art methods for solving GASO problems.
+                    A detailed ablation study on the LIAR dataset demonstrates the
+                    parsimonious nature of our method. A full copy of our implementation is
+                    publicly available at https://github.com/HishamAlyahya/semantic_backprop},
+    arxiv        = {2412.03624},
+    bibtex       = {wang2024how.bib},
+    code         = {https://github.com/HishamAlyahya/semantic_backprop.git},
+    journal      = {Submitted to the 13th International Conference on Learning Representations},
+}
+
+@article{herrmann2024automatic,
+    author       = {Vincent Herrmann* and
+                    Dylan R. Ashley* and
+                    J{\"{u}}rgen Schmidhuber},
+    year         = {2024},
+    title        = {Automatic Album Sequencing},
+    abstract     = {Album sequencing is a critical part of the album production process.
+                    Recently, a data-driven approach was proposed that sequences general
+                    collections of independent media by extracting the narrative essence of
+                    the items in the collections. While this approach implies an album
+                    sequencing technique, it is not widely accessible to a less technical
+                    audience, requiring advanced knowledge of machine learning techniques to
+                    use. To address this, we introduce a new user-friendly web-based tool
+                    that allows a less technical audience to upload music tracks, execute
+                    this technique in one click, and subsequently presents the result in a
+                    clean visualization to the user. To both increase the number of
+                    templates available to the user and address shortcomings of previous
+                    work, we also introduce a new direct transformer-based album sequencing
+                    method. We find that our more direct method outperforms a random
+                    baseline but does not reach the same performance as the narrative
+                    essence approach. Both methods are included in our web-based user
+                    interface, and this -- alongside a full copy of our implementation -- is
+                    publicly available at
+                    https://github.com/dylanashley/automatic-album-sequencing},
+    arxiv        = {2411.07772},
+    bibtex       = {herrmann2024automatic.bib},
+    code         = {https://github.com/dylanashley/automatic-album-sequencing.git},
+    journal      = {Presented as a late-breaking demo at the 2024 Conference of the International Society for Music Information Retrieval},
+    poster       = {herrmann2024automatic_poster.pdf},
+}
+
+@article{zhuge2024agent,
+    author       = {Mingchen Zhuge and
+                    Changsheng Zhao and
+                    Dylan Ashley and
+                    Wenyi Wang and
+                    Dmitrii Khizbullin and
+                    Yunyang Xiong and
+                    Zechun Liu and
+                    Ernie Chang and
+                    Raghuraman Krishnamoorthi and
+                    Yuandong Tian and
+                    Yangyang Shi and
+                    Vikas Chandra and
+                    J{\"{u}}rgen Schmidhuber},
+    year         = {2024},
+    title        = {Agent-as-a-Judge: Evaluate Agents with Agents},
+    abstract     = {Contemporary evaluation techniques are inadequate for agentic systems.
+                    These approaches either focus exclusively on final outcomes -- ignoring
+                    the step-by-step nature of agentic systems, or require excessive manual
+                    labour. To address this, we introduce the Agent-as-a-Judge framework,
+                    wherein agentic systems are used to evaluate agentic systems. This is an
+                    organic extension of the LLM-as-a-Judge framework, incorporating agentic
+                    features that enable intermediate feedback for the entire task-solving
+                    process. We apply the Agent-as-a-Judge to the task of code generation.
+                    To overcome issues with existing benchmarks and provide a
+                    proof-of-concept testbed for Agent-as-a-Judge, we present DevAI, a new
+                    benchmark of 55 realistic automated AI development tasks. It includes
+                    rich manual annotations, like a total of 365 hierarchical user
+                    requirements. We benchmark three of the popular agentic systems using
+                    Agent-as-a-Judge and find it dramatically outperforms LLM-as-a-Judge and
+                    is as reliable as our human evaluation baseline. Altogether, we believe
+                    that Agent-as-a-Judge marks a concrete step forward for modern agentic
+                    systems -- by providing rich and reliable reward signals necessary for
+                    dynamic and scalable self-improvement.},
+    arxiv        = {2410.10934},
+    bibtex       = {zhuge2024agent.bib},
+    journal      = {Submitted to the 13th International Conference on Learning Representations},
+}
+
 @article{wang2024scaling,
     author       = {Yuhui Wang and
                     Qingyuan Wu and
@@ -32,6 +140,7 @@
     arxiv        = {2406.08404},
     bibtex       = {wang2024scaling.bib},
     journal      = {Submitted to the 13th International Conference on Learning Representations and previously presented at the 17th European Workshop on Reinforcement Learning},
+    poster       = {wang2024scaling_poster.pdf},
 }
 
 @article{alhakami2024towards,
@@ -91,10 +200,10 @@
                     (largely) independent media, and as evidence, we also show that our
                     method works with image data.},
     arxiv        = {2211.12423},
-    bibtex       = {ashley2022narrative.bib},
+    bibtex       = {ashley2024distillation.bib},
     code         = {https://github.com/dylanashley/story-distiller.git},
     journal      = {Published in {IEEE} Transactions on Pattern Analysis and Machine Intelligence (IF 20.8) and previously presented at the {NeurIPS} 2023 Workshop on Machine Learning for Creativity and Design and at the {NeurIPS} 2022 Workshop Information-Theoretic Principles in Cognitive Systems)},
-    pdf          = {https://openreview.net/pdf?id=Q2xpIFubR8M},
+    pdf          = {https://doi.org/10.1109/TPAMI.2024.3480702},
     poster       = {ashley2022narrative_poster.pdf},
 }
 
