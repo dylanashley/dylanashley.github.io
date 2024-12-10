@@ -2,7 +2,7 @@
 layout: page
 permalink: /research/
 title: Research
-description: Publications and preprints in reversed chronological order.
+description: Publications and preprints in reversed chronological order with * denoting equal contribution.
 years: [2024, 2023, 2022, 2021, 2020, 2019, 2018]
 ---
 
