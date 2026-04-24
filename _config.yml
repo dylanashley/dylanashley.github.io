@@ -2,7 +2,7 @@
 # Site settings
 # -----------------------------------------------------------------------------
 name: Dylan Ashley
-email: mail@dylanashley.io
+email: mail@dylanashley.me
 description: >
   The personal website of Dylan Ashley.
 footer_text: >
@@ -10,7 +10,7 @@ footer_text: >
 
 url:
 baseurl:
-last_updated: 2025-02-19
+last_updated: 2026-04-24
 
 # -----------------------------------------------------------------------------
 # Open Graph

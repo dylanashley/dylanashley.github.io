@@ -1,6 +1,114 @@
 ---
 ---
 
+@article{dai2026efficient,
+    author       = {Yanning Dai* and
+                    Yuhui Wang* and
+                    Dylan R. Ashley and
+                    J{\"{u}}rgen Schmidhuber},
+    year         = {2026},
+    title        = {Efficient Morphology-Control Co-Design via Stackelberg Proximal Policy Optimization},
+    abstract     = {Morphology-control co-design concerns the coupled optimization of an
+                    agent's body structure and control policy. This problem exhibits a
+                    bi-level structure, where the control dynamically adapts to the
+                    morphology to maximize performance. Existing methods typically neglect
+                    the control's adaptation dynamics by adopting a single-level formulation
+                    that treats the control policy as fixed when optimizing morphology. This
+                    can lead to inefficient optimization, as morphology updates may be
+                    misaligned with control adaptation. In this paper, we revisit the
+                    co-design problem from a game-theoretic perspective, modeling the
+                    intrinsic coupling between morphology and control as a novel variant of
+                    a Stackelberg game. We propose Stackelberg Proximal Policy Optimization
+                    (Stackelberg PPO), which explicitly incorporates the control's
+                    adaptation dynamics into morphology optimization. By modeling this
+                    intrinsic coupling, our method aligns morphology updates with control
+                    adaptation, thereby stabilizing training and improving learning
+                    efficiency. Experiments across diverse co-design tasks demonstrate that
+                    Stackelberg PPO outperforms standard PPO in both stability and final
+                    performance, opening the way for dramatically more efficient robotics
+                    designs.},
+    bibtex       = {dai2026efficient.bib},
+    journal      = {Published in the Proceedings of the 14th International Conference on Learning Representations},
+    pdf          = {https://openreview.net/pdf?id=sJ0vOOkclw},
+}
+
+@article{ashley2026rpra,
+    author       = {Dylan R. Ashley and
+                    Ga{\"e}l Le Lan and
+                    Changsheng Zhao and
+                    Naina Dhingra and
+                    Zhipeng Cai and
+                    Ernie Chang and
+                    Mingchen Zhuge and
+                    Yangyang Shi and
+                    Vikas Chandra and
+                    J{\"{u}}rgen Schmidhuber},
+    year         = {2026},
+    title        = {{RPRA:} Predicting an {LLM}-Judge for Efficient but Performant Inference},
+    abstract     = {Large language models (LLMs) face a fundamental trade-off between
+                    computational efficiency (e.g., number of parameters) and output
+                    quality, especially when deployed on computationally limited devices
+                    such as phones or laptops. One way to address this challenge is by
+                    following the example of humans and have models ask for help when they
+                    believe they are incapable of solving a problem on their own; we can
+                    overcome this trade-off by allowing smaller models to respond to queries
+                    when they believe they can provide good responses, and deferring to
+                    larger models when they do not believe they can. To this end, in this
+                    paper, we investigate the viability of Predict-Answer/Act (PA) and
+                    Reason-Predict-Reason-Answer/Act (RPRA) paradigms where models predict
+                    -- prior to responding -- how an LLM judge would score their output. We
+                    evaluate three approaches: zero-shot prediction, prediction using an
+                    in-context report card, and supervised fine-tuning. Our results show
+                    that larger models (particularly reasoning models) perform well when
+                    predicting generic LLM judges zero-shot, while smaller models can
+                    reliably predict such judges well after being fine-tuned or provided
+                    with an in-context report card. Altogether, both approaches can
+                    substantially improve the prediction accuracy of smaller models, with
+                    report cards and fine-tuning achieving mean improvements of up to 55%
+                    and 52% across datasets, respectively. These findings suggest that
+                    models can learn to predict their own performance limitations, paving
+                    the way for more efficient and self-aware AI systems.},
+    arxiv        = {2604.12634},
+    bibtex       = {ashley2026rpra.bib},
+    journal      = {Under review and previously presented at the {ICLR} 2026 Workshop on Multi-Agent Learning and Its Opportunities in the Era of Generative {AI} and the {ICLR} 2026 Workshop on Agentic {AI} in the Wild: From Hallucinations to Reliable Autonomy},
+    poster       = {ashley2026rpra_poster.pdf},
+}
+
+@article{ashley2026racas,
+    author       = {Dylan R. Ashley* and
+                    Jan Przepi{\'{o}}ra* and
+                    Yimeng Chen* and
+                    Ali Abualsaud and
+                    Nurzhan Yesmagambet and
+                    Shinkyu Park and
+                    Eric Feron and
+                    J{\"{u}}rgen Schmidhuber},
+    year         = {2026},
+    title        = {{RACAS:} Controlling Diverse Robots With a Single Agentic System},
+    abstract     = {Many robotic platforms expose an API through which external software can
+                    command their actuators and read their sensors. However, transitioning
+                    from these low-level interfaces to high-level autonomous behaviour
+                    requires a complicated pipeline, whose components demand distinct areas
+                    of expertise. Existing approaches to bridging this gap either require
+                    retraining for every new embodiment or have only been validated across
+                    structurally similar platforms. We introduce RACAS (Robot-Agnostic
+                    Control via Agentic Systems), a cooperative agentic architecture in
+                    which three LLM/VLM-based modules (Monitors, a Controller, and a Memory
+                    Curator) communicate exclusively through natural language to provide
+                    closed-loop robot control. RACAS requires only a natural language
+                    description of the robot, a definition of available actions, and a task
+                    specification; no source code, model weights, or reward functions need
+                    to be modified to move between platforms. We evaluate RACAS on several
+                    tasks using a wheeled ground robot, a recently published novel
+                    multi-jointed robotic limb, and an underwater vehicle. RACAS
+                    consistently solved all assigned tasks across these radically different
+                    platforms, demonstrating the potential of agentic AI to substantially
+                    reduce the barrier to prototyping robotic solutions.},
+    arxiv        = {2603.05621},
+    bibtex       = {ashley2026racas.bib},
+    journal      = {Under review},
+}
+
 @article{strupl2025convergence,
     author       = {Miroslav {\v{S}}trupl and
                     Oleg Szehr and
@@ -41,7 +149,113 @@
     arxiv        = {2502.05672},
     bibtex       = {strupl2025convergence.bib},
     code         = {https://github.com/struplm/eUDRL-GCSL-ODT-Convergence-public},
-    journal      = {Submitted to the Journal of Machine Learning Research},
+    journal      = {Under review},
+}
+
+@article{alhakami2025towards,
+    author       = {Mohannad Alhakami* and
+                    Dylan R. Ashley* and
+                    Joel Dunham* and
+                    Yanning Dai and
+                    Francesco Faccio and
+                    Eric Feron and
+                    J{\"{u}}rgen Schmidhuber},
+    year         = {2025},
+    title        = {Towards an Extremely Robust Baby Robot With Rich Interaction Ability for Advanced Machine Learning Algorithms},
+    abstract     = {Advanced machine learning algorithms require platforms that are
+                    extremely robust and equipped with rich sensory feedback to handle
+                    extensive trial-and-error learning without relying on strong inductive
+                    biases. Traditional robotic designs, while well-suited for their
+                    specific use cases, are often fragile when used with these algorithms.
+                    To address this gap -- and inspired by the vision of enabling
+                    curiosity-driven baby robots -- we present a novel robotic limb designed
+                    from scratch. Our design has a hybrid soft-hard structure, high
+                    redundancy with rich non-contact sensors (exclusively cameras), and
+                    easily replaceable failure points. Proof-of-concept experiments using
+                    two contemporary reinforcement learning algorithms on a physical
+                    prototype demonstrate that our design is able to succeed in a simple
+                    target-finding task even under simulated sensor failures, all with
+                    minimal human oversight during extended learning periods. We believe
+                    this design represents a concrete step toward more tailored robotic
+                    designs for achieving general-purpose, generally intelligent robots.},
+    arxiv        = {2404.08093},
+    bibtex       = {alhakami2025towards.bib},
+    code         = {https://github.com/dylanashley/robot-limb-testai},
+    journal      = {Published in the Proceedings of the 2025 {IEEE/RSJ} International Conference on Intelligent Robots and Systems (Oral Presentation) and previously presented as a late-breaking result at the 2024 {IEEE/RSJ} International Conference on Intelligent Robots and Systems},
+    poster       = {alhakami2025towards_poster.pdf},
+}
+
+@article{zhuge2025agent,
+    author       = {Mingchen Zhuge and
+                    Changsheng Zhao and
+                    Dylan R. Ashley and
+                    Wenyi Wang and
+                    Dmitrii Khizbullin and
+                    Yunyang Xiong and
+                    Zechun Liu and
+                    Ernie Chang and
+                    Raghuraman Krishnamoorthi and
+                    Yuandong Tian and
+                    Yangyang Shi and
+                    Vikas Chandra and
+                    J{\"{u}}rgen Schmidhuber},
+    year         = {2025},
+    title        = {Agent-as-a-Judge: Evaluate Agents with Agents},
+    abstract     = {Contemporary evaluation techniques are inadequate for agentic systems.
+                    These approaches either focus exclusively on final outcomes -- ignoring
+                    the step-by-step nature of agentic systems, or require excessive manual
+                    labour. To address this, we introduce the Agent-as-a-Judge framework,
+                    wherein agentic systems are used to evaluate agentic systems. This is an
+                    organic extension of the LLM-as-a-Judge framework, incorporating agentic
+                    features that enable intermediate feedback for the entire task-solving
+                    process. We apply the Agent-as-a-Judge to the task of code generation.
+                    To overcome issues with existing benchmarks and provide a
+                    proof-of-concept testbed for Agent-as-a-Judge, we present DevAI, a new
+                    benchmark of 55 realistic automated AI development tasks. It includes
+                    rich manual annotations, like a total of 365 hierarchical user
+                    requirements. We benchmark three of the popular agentic systems using
+                    Agent-as-a-Judge and find it dramatically outperforms LLM-as-a-Judge and
+                    is as reliable as our human evaluation baseline. Altogether, we believe
+                    that Agent-as-a-Judge marks a concrete step forward for modern agentic
+                    systems -- by providing rich and reliable reward signals necessary for
+                    dynamic and scalable self-improvement.},
+    arxiv        = {2410.10934},
+    bibtex       = {zhuge2025agent.bib},
+    journal      = {Published in the Proceedings of the 42nd International Conference on Machine Learning},
+}
+
+@article{wang2025scaling,
+    author       = {Yuhui Wang and
+                    Qingyuan Wu and
+                    Dylan R. Ashley and
+                    Francesco Faccio and
+                    Weida Li and
+                    Chao Huang and
+                    J{\"{u}}rgen Schmidhuber},
+    year         = {2025},
+    title        = {Scaling Value Iteration Networks to 5000 Layers for Extreme Long-Term Planning},
+    abstract     = {The Value Iteration Network (VIN) is an end-to-end differentiable
+                    architecture that performs value iteration on a latent Markov Decision
+                    Process (MDP) for planning in reinforcement learning (RL). However, VINs
+                    struggle to scale to long-term and large-scale planning tasks, such as
+                    navigating a 100x100 maze -- a task that typically requires thousands of
+                    planning steps to solve. We observe that this deficiency is due to two
+                    issues: the representation capacity of the latent MDP and the planning
+                    module's depth. We address these by augmenting the latent MDP with a
+                    dynamic transition kernel, dramatically improving its representational
+                    capacity, and, to mitigate the vanishing gradient problem, introduce an
+                    "adaptive highway loss" that constructs skip connections to improve
+                    gradient flow. We evaluate our method on 2D maze navigation
+                    environments, the ViZDoom 3D navigation benchmark, and the real-world
+                    Lunar rover navigation task. We find that our new method, named Dynamic
+                    Transition VIN (DT-VIN), scales to 5000 layers and solves challenging
+                    versions of the above tasks. Altogether, we believe that DT-VIN
+                    represents a concrete step forward in performing long-term large-scale
+                    planning in RL environments.},
+    arxiv        = {2406.08404},
+    bibtex       = {wang2025scaling.bib},
+    journal      = {Published in the Proceedings of the 42nd International Conference on Machine Learning and previously presented at the 17th European Workshop on Reinforcement Learning},
+    poster       = {wang2025scaling_poster.pdf},
 }
 
 @article{ashley2025distillation,
@@ -109,7 +323,41 @@
     arxiv        = {2501.16288},
     bibtex       = {di2025upside.bib},
     code         = {https://github.com/JacopoD/udrlpg_},
-    journal      = {Presented at the 6th Multidisciplinary Conference on Reinforcement Learning and Decision Making},
+    journal      = {Presented at the 6th Multidisciplinary Conference on Reinforcement Learning and Decision Making and the 18th European Workshop on Reinforcement Learning},
+}
+
+@article{zhuge2025mindstorms,
+    author       = {Mingchen Zhuge* and
+                    Haozhe Liu* and
+                    Francesco Faccio* and
+                    Dylan R. Ashley* and
+                    R{\'{o}}bert Csord{\'{a}}s and
+                    Anand Gopalakrishnan and
+                    Abdullah Hamdi and
+                    Hasan Abed Al Kader Hammoud and
+                    Vincent Herrmann and
+                    Kazuki Irie and
+                    Louis Kirsch and
+                    Bing Li and
+                    Guohao Li and
+                    Shuming Liu and
+                    Jinjie Mai and
+                    Piotr Pi{\k{e}}kos and
+                    Aditya Ramesh and
+                    Imanol Schlag and
+                    Weimin Shi and
+                    Aleksandar Stani{\'{c}} and
+                    Wenyi Wang and
+                    Yuhui Wang and
+                    Mengmeng Xu and
+                    Deng-Ping Fan and
+                    Bernard Ghanem and
+                    J{\"{u}}rgen Schmidhuber},
+    year         = {2025},
+    title        = {Mindstorms in Natural Language-Based Societies of Mind},
+    bibtex       = {zhuge2025mindstorms.bib},
+    journal      = {Published in Computational Visual Media (IF 17.3) as the journal version of the early 2023 paper},
+    pdf          = {https://doi.org/10.26599/CVM.2025.9450460},
 }
 
 @article{wang2024how,
@@ -147,7 +395,7 @@
     arxiv        = {2412.03624},
     bibtex       = {wang2024how.bib},
     code         = {https://github.com/HishamAlyahya/semantic_backprop},
-    journal      = {Submitted to the 42nd International Conference on Machine Learning},
+    journal      = {Under review},
 }
 
 @article{herrmann2024automatic,
@@ -181,120 +429,13 @@
     poster       = {herrmann2024automatic_poster.pdf},
 }
 
-@article{zhuge2024agent,
-    author       = {Mingchen Zhuge and
-                    Changsheng Zhao and
-                    Dylan R. Ashley and
-                    Wenyi Wang and
-                    Dmitrii Khizbullin and
-                    Yunyang Xiong and
-                    Zechun Liu and
-                    Ernie Chang and
-                    Raghuraman Krishnamoorthi and
-                    Yuandong Tian and
-                    Yangyang Shi and
-                    Vikas Chandra and
-                    J{\"{u}}rgen Schmidhuber},
-    year         = {2024},
-    title        = {Agent-as-a-Judge: Evaluate Agents with Agents},
-    abstract     = {Contemporary evaluation techniques are inadequate for agentic systems.
-                    These approaches either focus exclusively on final outcomes -- ignoring
-                    the step-by-step nature of agentic systems, or require excessive manual
-                    labour. To address this, we introduce the Agent-as-a-Judge framework,
-                    wherein agentic systems are used to evaluate agentic systems. This is an
-                    organic extension of the LLM-as-a-Judge framework, incorporating agentic
-                    features that enable intermediate feedback for the entire task-solving
-                    process. We apply the Agent-as-a-Judge to the task of code generation.
-                    To overcome issues with existing benchmarks and provide a
-                    proof-of-concept testbed for Agent-as-a-Judge, we present DevAI, a new
-                    benchmark of 55 realistic automated AI development tasks. It includes
-                    rich manual annotations, like a total of 365 hierarchical user
-                    requirements. We benchmark three of the popular agentic systems using
-                    Agent-as-a-Judge and find it dramatically outperforms LLM-as-a-Judge and
-                    is as reliable as our human evaluation baseline. Altogether, we believe
-                    that Agent-as-a-Judge marks a concrete step forward for modern agentic
-                    systems -- by providing rich and reliable reward signals necessary for
-                    dynamic and scalable self-improvement.},
-    arxiv        = {2410.10934},
-    bibtex       = {zhuge2024agent.bib},
-    journal      = {Submitted to the Submitted to the 42nd International Conference on Machine Learning},
-}
-
-@article{wang2024scaling,
-    author       = {Yuhui Wang and
-                    Qingyuan Wu and
-                    Weida Li and
-                    Dylan R. Ashley and
-                    Francesco Faccio and
-                    Chao Huang and
-                    J{\"{u}}rgen Schmidhuber},
-    year         = {2024},
-    title        = {Scaling Value Iteration Networks to 5000 Layers for Extreme Long-Term Planning},
-    abstract     = {The Value Iteration Network (VIN) is an end-to-end differentiable
-                    architecture that performs value iteration on a latent Markov Decision
-                    Process (MDP) for planning in reinforcement learning (RL). However, VINs
-                    struggle to scale to long-term and large-scale planning tasks, such as
-                    navigating a 100x100 maze -- a task that typically requires thousands of
-                    planning steps to solve. We observe that this deficiency is due to two
-                    issues: the representation capacity of the latent MDP and the planning
-                    module's depth. We address these by augmenting the latent MDP with a
-                    dynamic transition kernel, dramatically improving its representational
-                    capacity, and, to mitigate the vanishing gradient problem, introduce an
-                    "adaptive highway loss" that constructs skip connections to improve
-                    gradient flow. We evaluate our method on 2D maze navigation
-                    environments, the ViZDoom 3D navigation benchmark, and the real-world
-                    Lunar rover navigation task. We find that our new method, named Dynamic
-                    Transition VIN (DT-VIN), scales to 5000 layers and solves challenging
-                    versions of the above tasks. Altogether, we believe that DT-VIN
-                    represents a concrete step forward in performing long-term large-scale
-                    planning in RL environments.},
-    arxiv        = {2406.08404},
-    bibtex       = {wang2024scaling.bib},
-    journal      = {Submitted to the 42nd International Conference on Machine Learning and previously presented at the 17th European Workshop on Reinforcement Learning},
-    poster       = {wang2024scaling_poster.pdf},
-}
-
-@article{alhakami2024towards,
-    author       = {Mohannad Alhakami* and
-                    Dylan R. Ashley* and
-                    Joel Dunham* and
-                    Yanning Dai and
-                    Francesco Faccio and
-                    Eric Feron and
-                    J{\"{u}}rgen Schmidhuber},
-    year         = {2024},
-    title        = {Towards an Extremely Robust Baby Robot With Rich Interaction Ability for Advanced Machine Learning Algorithms},
-    abstract     = {Advanced machine learning algorithms require platforms that are
-                    extremely robust and equipped with rich sensory feedback to handle
-                    extensive trial-and-error learning without relying on strong inductive
-                    biases. Traditional robotic designs, while well-suited for their
-                    specific use cases, are often fragile when used with these algorithms.
-                    To address this gap -- and inspired by the vision of enabling
-                    curiosity-driven baby robots -- we present a novel robotic limb designed
-                    from scratch. Our design has a hybrid soft-hard structure, high
-                    redundancy with rich non-contact sensors (exclusively cameras), and
-                    easily replaceable failure points. Proof-of-concept experiments using
-                    two contemporary reinforcement learning algorithms on a physical
-                    prototype demonstrate that our design is able to succeed in a simple
-                    target-finding task even under simulated sensor failures, all with
-                    minimal human oversight during extended learning periods. We believe
-                    this design represents a concrete step toward more tailored robotic
-                    designs for achieving general-purpose, generally intelligent robots.},
-    arxiv        = {2404.08093},
-    bibtex       = {alhakami2024towards.bib},
-    code         = {https://github.com/dylanashley/robot-limb-testai},
-    journal      = {Presented as a late-breaking result at the 2024 {IEEE/RSJ} International Conference on Intelligent Robots and Systems},
-    poster       = {alhakami2024towards_poster.pdf},
-}
-
-@article{zhuge2024mindstorms,
+@article{zhuge2023mindstorms,
     author       = {Mingchen Zhuge* and
                     Haozhe Liu* and
                     Francesco Faccio* and
                     Dylan R. Ashley* and
                     R{\'{o}}bert Csord{\'{a}}s and
-                    Anand
-                    Gopalakrishnan and
+                    Anand Gopalakrishnan and
                     Abdullah Hamdi and
                     Hasan Abed Al Kader Hammoud and
                     Vincent Herrmann and
@@ -315,7 +456,7 @@
                     Deng-Ping Fan and
                     Bernard Ghanem and
                     J{\"{u}}rgen Schmidhuber},
-    year         = {2024},
+    year         = {2023},
     title        = {Mindstorms in Natural Language-Based Societies of Mind},
     abstract     = {Both Minsky's "society of mind" and Schmidhuber's "learning to think"
                     inspire diverse societies of large multimodal neural networks (NNs)
@@ -343,7 +484,7 @@
                     some of these questions.},
     arxiv        = {2305.17066},
     bibtex       = {zhuge2023mindstorms.bib},
-    journal      = {Published in Computational Visual Media (IF 17.3) and previously presented at the {NeurIPS} 2023 Workshop on Robustness of Zero/Few-Shot Learning in Foundation Models (Best-Paper Award)},
+    journal      = {Presented at the {NeurIPS} 2023 Workshop on Robustness of Zero/Few-Shot Learning in Foundation Models (Best-Paper Award)},
     poster       = {zhuge2023mindstorms_poster.pdf},
     slides       = {zhuge2023mindstorms_slides.pdf},
 }
@@ -415,7 +556,7 @@
                     counterexamples are the simplest ones, we restrict all discussions to
                     finite (discrete) environments, ignoring issues of function
                     approximation and limited sample size.},
-    arxiv        = {2202.11960},
+    arxiv        = {2205.06595},
     bibtex       = {strupl2022upsidedown.bib},
     code         = {https://github.com/struplm/UDRL-GCSL-counterexample.git},
     journal      = {Presented at the 5th Multidisciplinary Conference on Reinforcement Learning and Decision Making and the 15th European Workshop on Reinforcement Learning},
