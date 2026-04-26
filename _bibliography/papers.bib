@@ -1,37 +1,6 @@
 ---
 ---
 
-@article{dai2026efficient,
-    author       = {Yanning Dai* and
-                    Yuhui Wang* and
-                    Dylan R. Ashley and
-                    J{\"{u}}rgen Schmidhuber},
-    year         = {2026},
-    title        = {Efficient Morphology-Control Co-Design via Stackelberg Proximal Policy Optimization},
-    abstract     = {Morphology-control co-design concerns the coupled optimization of an
-                    agent's body structure and control policy. This problem exhibits a
-                    bi-level structure, where the control dynamically adapts to the
-                    morphology to maximize performance. Existing methods typically neglect
-                    the control's adaptation dynamics by adopting a single-level formulation
-                    that treats the control policy as fixed when optimizing morphology. This
-                    can lead to inefficient optimization, as morphology updates may be
-                    misaligned with control adaptation. In this paper, we revisit the
-                    co-design problem from a game-theoretic perspective, modeling the
-                    intrinsic coupling between morphology and control as a novel variant of
-                    a Stackelberg game. We propose Stackelberg Proximal Policy Optimization
-                    (Stackelberg PPO), which explicitly incorporates the control's
-                    adaptation dynamics into morphology optimization. By modeling this
-                    intrinsic coupling, our method aligns morphology updates with control
-                    adaptation, thereby stabilizing training and improving learning
-                    efficiency. Experiments across diverse co-design tasks demonstrate that
-                    Stackelberg PPO outperforms standard PPO in both stability and final
-                    performance, opening the way for dramatically more efficient robotics
-                    designs.},
-    bibtex       = {dai2026efficient.bib},
-    journal      = {Published in the Proceedings of the 14th International Conference on Learning Representations},
-    pdf          = {https://openreview.net/pdf?id=sJ0vOOkclw},
-}
-
 @article{ashley2026rpra,
     author       = {Dylan R. Ashley and
                     Ga{\"e}l Le Lan and
@@ -74,6 +43,37 @@
     poster       = {ashley2026rpra_poster.pdf},
 }
 
+@article{dai2026efficient,
+    author       = {Yanning Dai* and
+                    Yuhui Wang* and
+                    Dylan R. Ashley and
+                    J{\"{u}}rgen Schmidhuber},
+    year         = {2026},
+    title        = {Efficient Morphology-Control Co-Design via Stackelberg Proximal Policy Optimization},
+    abstract     = {Morphology-control co-design concerns the coupled optimization of an
+                    agent's body structure and control policy. This problem exhibits a
+                    bi-level structure, where the control dynamically adapts to the
+                    morphology to maximize performance. Existing methods typically neglect
+                    the control's adaptation dynamics by adopting a single-level formulation
+                    that treats the control policy as fixed when optimizing morphology. This
+                    can lead to inefficient optimization, as morphology updates may be
+                    misaligned with control adaptation. In this paper, we revisit the
+                    co-design problem from a game-theoretic perspective, modeling the
+                    intrinsic coupling between morphology and control as a novel variant of
+                    a Stackelberg game. We propose Stackelberg Proximal Policy Optimization
+                    (Stackelberg PPO), which explicitly incorporates the control's
+                    adaptation dynamics into morphology optimization. By modeling this
+                    intrinsic coupling, our method aligns morphology updates with control
+                    adaptation, thereby stabilizing training and improving learning
+                    efficiency. Experiments across diverse co-design tasks demonstrate that
+                    Stackelberg PPO outperforms standard PPO in both stability and final
+                    performance, opening the way for dramatically more efficient robotics
+                    designs.},
+    bibtex       = {dai2026efficient.bib},
+    journal      = {Published in the Proceedings of the 14th International Conference on Learning Representations},
+    pdf          = {https://openreview.net/pdf?id=sJ0vOOkclw},
+}
+
 @article{ashley2026racas,
     author       = {Dylan R. Ashley* and
                     Jan Przepi{\'{o}}ra* and
@@ -106,49 +106,6 @@
                     reduce the barrier to prototyping robotic solutions.},
     arxiv        = {2603.05621},
     bibtex       = {ashley2026racas.bib},
-    journal      = {Under review},
-}
-
-@article{strupl2025convergence,
-    author       = {Miroslav {\v{S}}trupl and
-                    Oleg Szehr and
-                    Francesco Faccio and
-                    Dylan R. Ashley and
-                    Rupesh Kumar Srivastava and
-                    J{\"{u}}rgen Schmidhuber},
-    year         = {2025},
-    title        = {On the Convergence and Stability of Upside-Down Reinforcement Learning, Goal-Conditioned Supervised Learning, and Online Decision Transformers},
-    abstract     = {This article provides a rigorous analysis of convergence and stability
-                    of Episodic Upside-Down Reinforcement Learning, Goal-Conditioned
-                    Supervised Learning and Online Decision Transformers. These algorithms
-                    performed competitively across various benchmarks, from games to robotic
-                    tasks, but their theoretical understanding is limited to specific
-                    environmental conditions. This work initiates a theoretical foundation
-                    for algorithms that build on the broad paradigm of approaching
-                    reinforcement learning through supervised learning or sequence modeling.
-                    At the core of this investigation lies the analysis of conditions on the
-                    underlying environment, under which the algorithms can identify optimal
-                    solutions. We also assess whether emerging solutions remain stable in
-                    situations where the environment is subject to tiny levels of noise.
-                    Specifically, we study the continuity and asymptotic convergence of
-                    command-conditioned policies, values and the goal-reaching objective
-                    depending on the transition kernel of the underlying Markov Decision
-                    Process. We demonstrate that near-optimal behavior is achieved if the
-                    transition kernel is located in a sufficiently small neighborhood of a
-                    deterministic kernel. The mentioned quantities are continuous (with
-                    respect to a specific topology) at deterministic kernels, both
-                    asymptotically and after a finite number of learning cycles. The
-                    developed methods allow us to present the first explicit estimates on
-                    the convergence and stability of policies and values in terms of the
-                    underlying transition kernels. On the theoretical side we introduce a
-                    number of new concepts to reinforcement learning, like working in
-                    segment spaces, studying continuity in quotient topologies and the
-                    application of the fixed-point theory of dynamical systems. The
-                    theoretical study is accompanied by a detailed investigation of example
-                    environments and numerical experiments.},
-    arxiv        = {2502.05672},
-    bibtex       = {strupl2025convergence.bib},
-    code         = {https://github.com/struplm/eUDRL-GCSL-ODT-Convergence-public},
     journal      = {Under review},
 }
 
@@ -358,6 +315,49 @@
     bibtex       = {zhuge2025mindstorms.bib},
     journal      = {Published in Computational Visual Media (IF 17.3) as the journal version of the early 2023 paper},
     pdf          = {https://doi.org/10.26599/CVM.2025.9450460},
+}
+
+@article{strupl2025convergence,
+    author       = {Miroslav {\v{S}}trupl and
+                    Oleg Szehr and
+                    Francesco Faccio and
+                    Dylan R. Ashley and
+                    Rupesh Kumar Srivastava and
+                    J{\"{u}}rgen Schmidhuber},
+    year         = {2025},
+    title        = {On the Convergence and Stability of Upside-Down Reinforcement Learning, Goal-Conditioned Supervised Learning, and Online Decision Transformers},
+    abstract     = {This article provides a rigorous analysis of convergence and stability
+                    of Episodic Upside-Down Reinforcement Learning, Goal-Conditioned
+                    Supervised Learning and Online Decision Transformers. These algorithms
+                    performed competitively across various benchmarks, from games to robotic
+                    tasks, but their theoretical understanding is limited to specific
+                    environmental conditions. This work initiates a theoretical foundation
+                    for algorithms that build on the broad paradigm of approaching
+                    reinforcement learning through supervised learning or sequence modeling.
+                    At the core of this investigation lies the analysis of conditions on the
+                    underlying environment, under which the algorithms can identify optimal
+                    solutions. We also assess whether emerging solutions remain stable in
+                    situations where the environment is subject to tiny levels of noise.
+                    Specifically, we study the continuity and asymptotic convergence of
+                    command-conditioned policies, values and the goal-reaching objective
+                    depending on the transition kernel of the underlying Markov Decision
+                    Process. We demonstrate that near-optimal behavior is achieved if the
+                    transition kernel is located in a sufficiently small neighborhood of a
+                    deterministic kernel. The mentioned quantities are continuous (with
+                    respect to a specific topology) at deterministic kernels, both
+                    asymptotically and after a finite number of learning cycles. The
+                    developed methods allow us to present the first explicit estimates on
+                    the convergence and stability of policies and values in terms of the
+                    underlying transition kernels. On the theoretical side we introduce a
+                    number of new concepts to reinforcement learning, like working in
+                    segment spaces, studying continuity in quotient topologies and the
+                    application of the fixed-point theory of dynamical systems. The
+                    theoretical study is accompanied by a detailed investigation of example
+                    environments and numerical experiments.},
+    arxiv        = {2502.05672},
+    bibtex       = {strupl2025convergence.bib},
+    code         = {https://github.com/struplm/eUDRL-GCSL-ODT-Convergence-public},
+    journal      = {Under review},
 }
 
 @article{wang2024how,
@@ -663,6 +663,27 @@
     journal      = {Preprint on ar{X}iv},
 }
 
+@article{ashley2021back,
+    author       = {Dylan R. Ashley* and
+                    Anssi Kanervisto* and
+                    Brendan Bennett*},
+    year         = {2021},
+    title        = {Back to Square One: Superhuman Performance in Chutes and Ladders Through Deep Neural Networks and Tree Search},
+    abstract     = {We present AlphaChute: a state-of-the-art algorithm that achieves
+                    superhuman performance in the ancient game of Chutes and Ladders. We
+                    prove that our algorithm converges to the Nash equilibrium in constant
+                    time, and therefore is--to the best of our knowledge--the first such
+                    formal solution to this game. Surprisingly, despite all this, our
+                    implementation of AlphaChute remains relatively straightforward due to
+                    domain-specific adaptations. We provide the source code for AlphaChute
+                    here in our Appendix.},
+    arxiv        = {2104.00698},
+    bibtex       = {ashley2021back.bib},
+    code         = {https://github.com/Miffyli/mastering-chutes-and-ladders},
+    journal      = {Published in the Proceedings of the 2021 Conference of the {ACH} Special Interest Group on Harry Q. Bovik},
+    pdf          = {http://sigbovik.org/2021/proceedings.pdf},
+}
+
 @article{ashley2021does,
     author       = {Dylan R. Ashley and
                     Sina Ghiassian and
@@ -698,27 +719,6 @@
     bibtex       = {ashley2021does.bib},
     code         = {https://github.com/dylanashley/catastrophic-forgetting/tree/arxiv},
     journal      = {Preprint on ar{X}iv},
-}
-
-@article{ashley2021back,
-    author       = {Dylan R. Ashley* and
-                    Anssi Kanervisto* and
-                    Brendan Bennett*},
-    year         = {2021},
-    title        = {Back to Square One: Superhuman Performance in Chutes and Ladders Through Deep Neural Networks and Tree Search},
-    abstract     = {We present AlphaChute: a state-of-the-art algorithm that achieves
-                    superhuman performance in the ancient game of Chutes and Ladders. We
-                    prove that our algorithm converges to the Nash equilibrium in constant
-                    time, and therefore is--to the best of our knowledge--the first such
-                    formal solution to this game. Surprisingly, despite all this, our
-                    implementation of AlphaChute remains relatively straightforward due to
-                    domain-specific adaptations. We provide the source code for AlphaChute
-                    here in our Appendix.},
-    arxiv        = {2104.00698},
-    bibtex       = {ashley2021back.bib},
-    code         = {https://github.com/Miffyli/mastering-chutes-and-ladders},
-    journal      = {Published in the Proceedings of the 2021 Conference of the {ACH} Special Interest Group on Harry Q. Bovik},
-    pdf          = {http://sigbovik.org/2021/proceedings.pdf},
 }
 
 @article{ashley2020understanding,
